@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44954facec55e084687db45854008e0b, type: 3}
+  m_Name: HealthObject
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2930756407638251696, guid: 8007ffe8d434c5544a8ec331d3933617, type: 3}
+  sprite: {fileID: -1663736264, guid: 3e855cdd8f7c0944f9c7250db9d20b73, type: 3}
+  stackable: 0
+  flackItem: 0
+  healthFlask: 50
