@@ -2,11 +2,14 @@ using System;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "ScriptableObject/Item/HealthItem",fileName = "HealthObject")]
-public class HealthObject : ItemObject
+public class HealthObject : ItemObject,IHealthFlask
 {
    public int healthFlask;
-   private void Awake()
+
+
+   public int HealthValue
    {
-      flackItem = FlackItem.HealthItem;
+      get => healthFlask;
+      set => value = healthFlask;
    }
 }

@@ -14,9 +14,9 @@ public class CharacterHealth : MonoBehaviour
 
    private void TryUsedItem(ItemObject itemObject)
    {
-      if (itemObject is IUsableItem healthObject)
+      if (itemObject is IHealthFlask healthObject)
       {
-        healthObject.UseItem();
+        healthSO.health += healthObject.HealthValue;
       }
    }
 }

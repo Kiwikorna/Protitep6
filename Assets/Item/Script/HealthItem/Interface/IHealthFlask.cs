@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface IUsableItem
+public interface IHealthFlask
 {
-   public ItemObject UseItem();
+   public int HealthValue { get; }
 }
