@@ -1,30 +1,22 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CharacterHealth : MonoBehaviour
 {
-   [SerializeField]private HealthFlask healthFlask;
-   private ItemObject _itemObject;
-   
-   private void Update()
+   [SerializeField] private InventoryUsing inventoryUsing;
+   [SerializeField] private PlayerHealthSO healthSO;
+
+   private void Awake()
    {
-      HealthFlask();
+      inventoryUsing.onItemUsed += TryUsedItem;
    }
 
-   private void HealthFlask()
+   private void TryUsedItem(ItemObject itemObject)
    {
-      if (Controller.Instance.GetInteractionUseHandler())
+      if (itemObject is HealthObject healthObject)
       {
-         _itemObject = InventoryManager.Instance.GetSelectedSlot(true);
-         if (_itemObject != null)
-         {
-            if (_itemObject.flackItem == ItemObject.FlackItem.HealthItem)
-            {
-               healthFlask.Health();
-               
-              
-            }
-         }
+         healthSO.health += healthObject.healthFlask;
       }
    }
 }

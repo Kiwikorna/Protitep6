@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -107,13 +108,15 @@ public class Controller : MonoBehaviour
 
         return result;
     }
-    
+
     public bool GetInteractionUseHandler()
     {
-        bool result = _isUseIntarection;
-        _isUseIntarection = false;
+        return _isUseIntarection;
+    }
 
-        return result;
+    private void LateUpdate()
+    {
+        _isUseIntarection = false;
     }
 
     public Vector2 GetDirection() => _moveDirection;

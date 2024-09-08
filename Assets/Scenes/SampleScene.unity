@@ -6897,6 +6897,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5993da3700f6c04db7d39fcc3d017d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1658235174
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2930756407638251696, guid: 8007ffe8d434c5544a8ec331d3933617, type: 3}
+      propertyPath: m_Name
+      value: HealthItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373530736279118269, guid: 8007ffe8d434c5544a8ec331d3933617, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373530736279118269, guid: 8007ffe8d434c5544a8ec331d3933617, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373530736279118269, guid: 8007ffe8d434c5544a8ec331d3933617, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373530736279118269, guid: 8007ffe8d434c5544a8ec331d3933617, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373530736279118269, guid: 8007ffe8d434c5544a8ec331d3933617, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373530736279118269, guid: 8007ffe8d434c5544a8ec331d3933617, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373530736279118269, guid: 8007ffe8d434c5544a8ec331d3933617, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373530736279118269, guid: 8007ffe8d434c5544a8ec331d3933617, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373530736279118269, guid: 8007ffe8d434c5544a8ec331d3933617, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373530736279118269, guid: 8007ffe8d434c5544a8ec331d3933617, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8007ffe8d434c5544a8ec331d3933617, type: 3}
 --- !u!224 &1684964984 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4086467025468203153, guid: 5358222c95684e64393b86c816a21252, type: 3}
@@ -8353,6 +8410,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 128530250}
     m_Modifications:
+    - target: {fileID: 3307727156689493114, guid: 578ad1162a99b064c8a375f0fa70f689, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -145
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307727156689493114, guid: 578ad1162a99b064c8a375f0fa70f689, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 253
+      objectReference: {fileID: 0}
     - target: {fileID: 3888241945363396371, guid: 578ad1162a99b064c8a375f0fa70f689, type: 3}
       propertyPath: m_Name
       value: PlayerHealth
@@ -8454,6 +8519,10 @@ PrefabInstance:
       propertyPath: flask
       value: 
       objectReference: {fileID: 1554017583}
+    - target: {fileID: 3786165243076762084, guid: ef0c9c993edae1947b9d2bbb3e0c3dbe, type: 3}
+      propertyPath: _magicSO
+      value: 
+      objectReference: {fileID: 11400000, guid: d145b4d42de32334c96a4f5c767081e2, type: 2}
     - target: {fileID: 7746289000690279045, guid: ef0c9c993edae1947b9d2bbb3e0c3dbe, type: 3}
       propertyPath: m_Name
       value: ManaPlayer
@@ -8560,6 +8629,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 4b662c1e1d82100458cbe25675893b7c, type: 2}
     - target: {fileID: 6065530289007741179, guid: bd6ac2ebd84a90341ae1dee9373f4dad, type: 3}
+      propertyPath: person
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b662c1e1d82100458cbe25675893b7c, type: 2}
+    - target: {fileID: 6065530289007741179, guid: bd6ac2ebd84a90341ae1dee9373f4dad, type: 3}
+      propertyPath: _healthSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b662c1e1d82100458cbe25675893b7c, type: 2}
+    - target: {fileID: 6065530289007741179, guid: bd6ac2ebd84a90341ae1dee9373f4dad, type: 3}
       propertyPath: healthFlask
       value: 
       objectReference: {fileID: 0}
@@ -8584,3 +8661,4 @@ SceneRoots:
   - {fileID: 585915007}
   - {fileID: 1316719480}
   - {fileID: 4568919716138809182}
+  - {fileID: 1658235174}
