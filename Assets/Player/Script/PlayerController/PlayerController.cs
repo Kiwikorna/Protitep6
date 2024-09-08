@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody _body;
 
     private bool isRun = false;
-
     [SerializeField] private float speed = 7.0f; // Скорость в метрах в секунду
     [SerializeField] private float rotationSpeed = 10.0f;
 

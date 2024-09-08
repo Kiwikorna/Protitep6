@@ -11,8 +11,10 @@ public class Controller : MonoBehaviour
     private InputSystem_Actions _inputSystemActions;
     private List<ActionClassController> listController;
     private bool _isInteractedHandler = false;
-    private bool _isDropItemInventory = false;
+    public event Action OnDropItemButtonPressed ;
+   
     private bool _isUseIntarection = false;
+    
 
 
     private void Awake()
@@ -67,11 +69,7 @@ public class Controller : MonoBehaviour
     {
         if (context.performed)
         {
-            _isDropItemInventory = true;
-        }
-        else if (context.canceled)
-        {
-            _isDropItemInventory = false;
+            OnDropItemButtonPressed?.Invoke();
         }
     }
 
@@ -101,13 +99,7 @@ public class Controller : MonoBehaviour
         return result;
     }
 
-    public bool GetInteractionDropHandler()
-    {
-        bool result = _isDropItemInventory;
-        _isDropItemInventory = false;
 
-        return result;
-    }
 
     public bool GetInteractionUseHandler()
     {
