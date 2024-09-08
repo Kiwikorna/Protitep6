@@ -6,23 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a6bd6aa4-242a-4a70-82df-7493e266aa17" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/HealthItem/HealthFlask.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/HealthItem/HealthFlask.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Health.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Health.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/HealthItem/Interface/IHealthFlask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Script/HealthItem/Interface/IHealthFlask.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Health/CharacterHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Health/CharacterHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Health/CharacterHealth.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Health/CharacterHealth.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Magic.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Magic.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Magic/CharacterMagic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Magic/CharacterMagic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Magic/CharacterMagic.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Magic/CharacterMagic.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/PlayerController.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/Controller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/Controller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +112,7 @@
       <workItem from="1725546963859" duration="6696000" />
       <workItem from="1725608636941" duration="8837000" />
       <workItem from="1725719474302" duration="17010000" />
-      <workItem from="1725788958087" duration="2362000" />
+      <workItem from="1725788958087" duration="3084000" />
     </task>
     <servers />
   </component>
