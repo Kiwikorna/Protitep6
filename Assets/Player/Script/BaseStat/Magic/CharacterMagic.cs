@@ -14,9 +14,9 @@ public class CharacterMagic : MonoBehaviour
         if (Controller.Instance.GetInteractionUseHandler())
         {
             var _itemObject = InventoryManager.Instance.GetSelectedSlot(true);
-            if (_itemObject is MagicObject magicObject)
+            if (_itemObject is IManaFlask magicObject)
             {
-                _magicSO.manaPlayer += magicObject.manaItem;
+                _magicSO.manaPlayer += magicObject.ManaValue;
             }
         }
     }

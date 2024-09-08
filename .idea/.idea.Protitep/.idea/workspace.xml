@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bd6aa4-242a-4a70-82df-7493e266aa17" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/Prefab/HealthItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Prefab/HealthItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/HealthItem/Class/HealthFlask.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/HealthItem/Class/HealthFlask.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/HealthItem/Interface/IHealthFlask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Script/HealthItem/Interface/IHealthFlask.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/ScriptableObject/HealthObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Script/ScriptableObject/HealthObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/ScriptableObject/ItemObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Script/ScriptableObject/ItemObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Item/Prefab/ManaFlask.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Prefab/ManaFlask.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/MagicItem/MagicFlask.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/MagicItem/MagicFlask.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Item/Script/ScriptableObject/MagicObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Script/ScriptableObject/MagicObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Health/CharacterHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Health/CharacterHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/PlayerHealthSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/PlayerHealthSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Magic/CharacterMagic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Magic/CharacterMagic.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +115,7 @@
       <workItem from="1725608636941" duration="8837000" />
       <workItem from="1725719474302" duration="17010000" />
       <workItem from="1725788958087" duration="7053000" />
-      <workItem from="1725796092208" duration="2069000" />
+      <workItem from="1725796092208" duration="2369000" />
     </task>
     <servers />
   </component>
