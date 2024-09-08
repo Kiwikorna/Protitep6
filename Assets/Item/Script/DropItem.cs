@@ -8,98 +8,53 @@ public class DropItem : MonoBehaviour
     [SerializeField] private InventoryInputUI inventoryInputUI;
     [SerializeField] private LayerMask dropItemLayer;
     [SerializeField] private float customDropDistance;
-
-
     private void Awake()
     {
         Controller.Instance.OnDropItemButtonPressed += InputRemoveItem;
         
     }
-
     private void OnDisable()
     {
         Controller.Instance.OnDropItemButtonPressed -= InputRemoveItem;
     }
-
     private void InputRemoveItem()
     {
         RemoveItem();
     }
-
     private void Update()
     {
         TryRemoveItem();
     }
-
     public bool TryRemoveItem()
     {
         if (inventoryInputUI.GetSelectSlot() < 0 ||
             inventoryInputUI.GetSelectSlot() >= inventoryInputUI.GetSlotUI().Length)
             return false;
-
-        InventorySlot selectedSlot = inventoryInputUI.GetSlotUI()[inventoryInputUI.GetSelectSlot()];
-
-        if (selectedSlot == null)
-            return false;
-        InventoryItem slotInItem = selectedSlot.GetComponentInChildren<InventoryItem>();
+        InventoryItem slotInItem = GetItemInSlot();
         if (slotInItem == null)
             return false;
-
         if (!IsHaveEmptySpaceInForwardDirection())
             return false;
-
-        
         return true;
 
     }
-
     public bool RemoveItem()
     {
-
-        InventorySlot selectedSlot = inventoryInputUI.GetSlotUI()[inventoryInputUI.GetSelectSlot()];
-        InventoryItem slotInItem = selectedSlot.GetComponentInChildren<InventoryItem>();
-
+        InventoryItem slotInItem = GetItemInSlot();
         if (slotInItem != null)
         {
             if (IsHaveEmptySpaceInForwardDirection())
             {
                 var item = GetItemInventory();
-
-         
-                    
-                    slotInItem.count--;
+                    ShrinkingObjects();
                     SpawnDropItem(item);
-                    if (slotInItem.count <= 0)
-                    {
-                        Destroy(slotInItem.gameObject);
-                    }
-                    else
-                    {
-                        slotInItem.RefreshCount();
-                    }
-                
             }
             else
             {
-              
                     var item = GetItemInventory();
                     var dropPosition = GetDropPosition();
-
+                    ShrinkingObjects();
                     SpawnDropItem(item, dropPosition);
-
-                    slotInItem.count--;
-                    SpawnDropItem(item, dropPosition);  
-                    if (slotInItem.count <= 0)
-                    {
-                        Destroy(slotInItem.gameObject);
-                    }
-                    else
-                    {
-                        slotInItem.RefreshCount();
-                    }
-                
-
-
             }
 
             return true;
@@ -113,7 +68,6 @@ public class DropItem : MonoBehaviour
         Vector3 drop = GetDropPosition();
         Instantiate(item.prefab,  drop, Quaternion.identity);
     }
-
     public void SpawnDropItem(ItemObject item, Vector3 dropPosition)
     {
         Instantiate(item.prefab, dropPosition, Quaternion.identity);
@@ -124,7 +78,6 @@ public class DropItem : MonoBehaviour
         float dropDistance = 1f;
         Ray ray = new Ray(transform.position, transform.forward);
         bool canDrop = !Physics.Raycast(ray, dropDistance * customDropDistance, dropItemLayer);
-
         return canDrop;
     }
 
@@ -142,11 +95,29 @@ public class DropItem : MonoBehaviour
 
     public ItemObject GetItemInventory()
     {
+        InventoryItem slotInItem = GetItemInSlot();
+        ItemObject item = slotInItem.GetItemObject();
+        return item;
+    }
+
+    public InventoryItem GetItemInSlot()
+    {
         InventorySlot selectedSlot = inventoryInputUI.GetSlotUI()[inventoryInputUI.GetSelectSlot()];
         InventoryItem slotInItem = selectedSlot.GetComponentInChildren<InventoryItem>();
 
-        ItemObject item = slotInItem.GetItemObject();
-
-        return item;
+        return slotInItem;
+    }
+    private void ShrinkingObjects()
+    {
+        InventoryItem slotInItem = GetItemInSlot();
+        slotInItem.count--;
+        if (slotInItem.count <= 0)
+        {
+            Destroy(slotInItem.gameObject);
+        }
+        else
+        {
+            slotInItem.RefreshCount();
+        }
     }
 }

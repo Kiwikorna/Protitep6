@@ -1,23 +1,22 @@
+using System;
 using UnityEngine;
 
 public class CharacterMagic : MonoBehaviour
 {
     [SerializeField] private PlayerMagicSO _magicSO;
+    [SerializeField] private InventoryUsing inventoryUsing;
 
-    private void Update()
+    private void Awake()
     {
-        Magic();
+        inventoryUsing.onItemUsed += Magic;
     }
 
-    private void Magic()
+    private void Magic(ItemObject itemObject)
     {
-        if (Controller.Instance.GetInteractionUseHandler())
-        {
-            var _itemObject = InventoryManager.Instance.GetSelectedSlot(true);
-            if (_itemObject is IManaFlask magicObject)
+             itemObject = InventoryManager.Instance.GetSelectedSlot(true);
+            if (itemObject is IManaFlask magicObject)
             {
                 _magicSO.manaPlayer += magicObject.ManaValue;
             }
-        }
     }
 }

@@ -17,7 +17,7 @@ public class InventoryInputUI : MonoBehaviour
         if (Input.inputString != null)
         {
             bool isNumber = int.TryParse(Input.inputString, out int number);
-            if (isNumber && number > 0 && number < 8)
+            if (isNumber && number is > 0 and < 8)
             {
                 ChangeSelectedSlot(number - 1);
             }

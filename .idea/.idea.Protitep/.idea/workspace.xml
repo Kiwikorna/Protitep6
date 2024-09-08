@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a6bd6aa4-242a-4a70-82df-7493e266aa17" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/Prefab/HealthItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Prefab/HealthItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/InventoryInputUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/InventoryInputUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Item/Script/DropItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Script/DropItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Intaraction/Class/InteractionSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Intaraction/Class/InteractionSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/MagicItem/Class/DisableCollishnObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/MagicItem/Class/DisableCollishnObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Magic/CharacterMagic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Magic/CharacterMagic.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +116,7 @@
       <workItem from="1725608636941" duration="8837000" />
       <workItem from="1725719474302" duration="17010000" />
       <workItem from="1725788958087" duration="7053000" />
-      <workItem from="1725796092208" duration="16197000" />
+      <workItem from="1725796092208" duration="21049000" />
     </task>
     <servers />
   </component>
