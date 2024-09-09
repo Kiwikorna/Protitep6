@@ -1,3 +1,4 @@
+
 using System;
 using UnityEngine;
 
@@ -5,7 +6,7 @@ public class DropItem : MonoBehaviour
 {
     [SerializeField] private Transform player;
     [SerializeField] private float distance = 4f;
-    [SerializeField] private InventoryInputUI inventoryInputUI;
+    [SerializeField] private InventoryManager inventoryInputUI;
     [SerializeField] private LayerMask dropItemLayer;
     [SerializeField] private float customDropDistance;
 
@@ -40,7 +41,6 @@ public class DropItem : MonoBehaviour
         return true;
 
     }
-
     public bool RemoveItem()
     {
         if (!TryRemoveItem())

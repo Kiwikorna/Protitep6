@@ -8,7 +8,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 {
     [SerializeField]private Image image;
     [SerializeField] private Color selectedSlot, desealectedSlot;
-
+   
 
     public void Select()
     {

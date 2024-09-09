@@ -1,3 +1,4 @@
+
 using System;
 using System.Resources;
 using UnityEngine;
@@ -10,12 +11,8 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private InventorySlot[] inventorySlots;
     [SerializeField] private GameObject inventoryItemPrefab;
     [SerializeField] private GameObject dropItem;
-    [SerializeField] private InventoryInputUI inputUI;
-   
-
- 
     private readonly int _maxSizeSlot = 4;
-   
+    private int _selectSlot = -1;
 
     private void Awake()
     {
@@ -25,6 +22,33 @@ public class InventoryManager : MonoBehaviour
         }
 
         Instance = this;
+    }
+
+    private void Update()
+    {
+        InputUI();
+    }
+
+    private void InputUI()
+    {
+        if (Input.inputString != null)
+        {
+            bool isNumber = int.TryParse(Input.inputString, out int number);
+            if (isNumber && number is > 0 and < 8)
+            {
+                ChangeSelectedSlot(number - 1);
+            }
+        }
+    }
+    
+    private void ChangeSelectedSlot(int newValue)
+    {
+        if (_selectSlot >= 0)
+        {
+            inventorySlots[_selectSlot].Desealected();
+        }
+        inventorySlots[newValue].Select();
+        _selectSlot = newValue;
     }
     
     public bool AddItem(ItemObject item)
@@ -60,13 +84,13 @@ public class InventoryManager : MonoBehaviour
 
     public ItemObject GetSelectedSlot(bool use)
     {
-        if (inputUI.GetSelectSlot() < 0 || inputUI.GetSelectSlot() >= inputUI.GetSlotUI().Length)
+        if (_selectSlot < 0 || _selectSlot >=  inventorySlots.Length)
         {
             return null;
         }
         
             
-        InventorySlot selectSlot = inventorySlots[inputUI.GetSelectSlot()];
+        InventorySlot selectSlot = inventorySlots[_selectSlot];
         InventoryItem itemInSlot = selectSlot.GetComponentInChildren<InventoryItem>();
 
         if (itemInSlot != null)
@@ -103,4 +127,9 @@ public class InventoryManager : MonoBehaviour
         
         inventoryItem.Intialized(item);
     }
+    
+    public InventorySlot[] GetSlotUI() => inventorySlots;
+
+
+    public int GetSelectSlot() => _selectSlot;
 }
