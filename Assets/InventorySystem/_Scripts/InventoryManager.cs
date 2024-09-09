@@ -103,10 +103,4 @@ public class InventoryManager : MonoBehaviour
         
         inventoryItem.Intialized(item);
     }
-
-   
-
-
-
-
 }

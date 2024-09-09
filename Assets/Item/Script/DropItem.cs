@@ -12,7 +12,6 @@ public class DropItem : MonoBehaviour
     private void Awake()
     {
         Controller.Instance.OnDropItemButtonPressed += InputRemoveItem;
-
     }
 
     private void OnDisable()
@@ -24,21 +23,17 @@ public class DropItem : MonoBehaviour
     {
         RemoveItem();
     }
-
-    private void Update()
-    {
-        TryRemoveItem();
-    }
-
+    
     public bool TryRemoveItem()
     {
         if (inventoryInputUI.GetSelectSlot() < 0 ||
             inventoryInputUI.GetSelectSlot() >= inventoryInputUI.GetSlotUI().Length)
             return false;
-
+        
         InventoryItem slotInItem = GetItemInSlot();
         if (slotInItem == null)
             return false;
+        
         if (!IsHaveEmptySpaceInForwardDirection())
             return false;
 
@@ -48,9 +43,12 @@ public class DropItem : MonoBehaviour
 
     public bool RemoveItem()
     {
-        InventoryItem slotInItem = GetItemInSlot();
-        if (slotInItem != null)
+        if (!TryRemoveItem())
         {
+            return false;
+        }
+        InventoryItem slotInItem = GetItemInSlot();
+        
             if (IsHaveEmptySpaceInForwardDirection())
             {
                 var item = slotInItem.GetItemObject();
@@ -66,20 +64,13 @@ public class DropItem : MonoBehaviour
             }
 
             return true;
-        }
-
-        return false;
+            
     }
 
-    public void SpawnDropItem(ItemObject item)
+    public void SpawnDropItem(ItemObject item, Vector3? dropPosition = null)
     {
-        Vector3 drop = GetDropPosition();
+        Vector3 drop = dropPosition ?? GetDropPosition(); 
         Instantiate(item.prefab, drop, Quaternion.identity);
-    }
-
-    public void SpawnDropItem(ItemObject item, Vector3 dropPosition)
-    {
-        Instantiate(item.prefab, dropPosition, Quaternion.identity);
     }
 
     public bool IsHaveEmptySpaceInForwardDirection()
