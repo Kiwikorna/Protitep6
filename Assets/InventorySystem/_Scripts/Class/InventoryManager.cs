@@ -11,6 +11,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private InventorySlot[] inventorySlots;
     [SerializeField] private GameObject inventoryItemPrefab;
     [SerializeField] private GameObject dropItem;
+    [SerializeField] private InventoryInputUI input;
     private readonly int _maxSizeSlot = 4;
     private int _selectSlot = -1;
 
@@ -22,25 +23,16 @@ public class InventoryManager : MonoBehaviour
         }
 
         Instance = this;
+
+
+        input.onInventoryButten += ChangeSelectedSlot;
     }
 
-    private void Update()
+    private void OnDestroy()
     {
-        InputUI();
+        input.onInventoryButten -= ChangeSelectedSlot;
     }
 
-    private void InputUI()
-    {
-        if (Input.inputString != null)
-        {
-            bool isNumber = int.TryParse(Input.inputString, out int number);
-            if (isNumber && number is > 0 and < 8)
-            {
-                ChangeSelectedSlot(number - 1);
-            }
-        }
-    }
-    
     private void ChangeSelectedSlot(int newValue)
     {
         if (_selectSlot >= 0)

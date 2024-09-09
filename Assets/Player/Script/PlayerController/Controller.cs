@@ -12,7 +12,6 @@ public class Controller : MonoBehaviour
     private List<ActionClassController> listController;
     private bool _isInteractedHandler = false;
     public event Action OnDropItemButtonPressed ;
-   
     private bool _isUseIntarection = false;
     
 
@@ -25,7 +24,8 @@ public class Controller : MonoBehaviour
             new (_inputSystemActions.Player.Move, Movement),
             new (_inputSystemActions.Player.Interact,InteractHandler),
             new (_inputSystemActions.Player.DropItemInventory,InteractionDropItemHandler),
-            new(_inputSystemActions.Player.UseItem,UseInteractionItem)
+            new(_inputSystemActions.Player.UseItem,UseInteractionItem),
+           
         };
 
         foreach (var controller in listController)
