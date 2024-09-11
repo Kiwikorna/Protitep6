@@ -5,11 +5,11 @@ using UnityEngine.Serialization;
 public class CharacterHealth : MonoBehaviour
 {
    [SerializeField] private InventoryUsing inventoryUsing;
-   [SerializeField] private PlayerHealthSO healthSO;
+   [SerializeField] private CharacterHealthSO healthSO;
 
    private void Awake()
    {
-      inventoryUsing.onItemUsed += TryUsedItem;
+      inventoryUsing.OnItemUsed += TryUsedItem;
    }
 
    private void TryUsedItem(ItemObject itemObject)

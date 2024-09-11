@@ -5,7 +5,7 @@ public class UIPlayerHealth : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI healthText;
 
-    [SerializeField] private PlayerHealthSO player;
+    [SerializeField] private CharacterHealthSO player;
     // Update is called once per frame
     void Update()
     {

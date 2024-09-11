@@ -3,9 +3,8 @@ using UnityEngine;
 
 public class InventoryUsing : MonoBehaviour
 {
-    public event Action onAnyItemUsed;
-
-    public event Action<ItemObject> onItemUsed; 
+    public event Action OnAnyItemUsed;
+    public event Action<ItemObject> OnItemUsed; 
 
     private void Update()
     {
@@ -19,8 +18,8 @@ public class InventoryUsing : MonoBehaviour
             var itemObject = InventoryManager.Instance.GetSelectedSlot(true);
             if (itemObject != null)
             {
-                onAnyItemUsed?.Invoke();
-                onItemUsed?.Invoke(itemObject);
+                OnAnyItemUsed?.Invoke();
+                OnItemUsed?.Invoke(itemObject);
             }
         }
     }

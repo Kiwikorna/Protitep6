@@ -6,27 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="a6bd6aa4-242a-4a70-82df-7493e266aa17" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryUsing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryUsing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Attack/BaseSpall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Attack/BaseSpall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Attack/Prefab/Spell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Attack/Prefab/Spell.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Health/CharacterHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Health/CharacterHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Magic/CharacterMagic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Magic/CharacterMagic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerAttack.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerAttack.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerMana.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerMana.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/PlayerHealthSO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/PlayerHealthSO.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/PlayerMagicSO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/PlayerMagicSO.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI/DemoButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI/DemoButton.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI/InventoryBackground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI/InventoryBackground.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI/InventorySlot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI/InventorySlot.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI/Pickaxe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI/Pickaxe.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI/Shovel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI/Shovel.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI/UI Chest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI/UI Chest.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI/minecraft_landscape.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIInventory/Script/Graphics/UI/minecraft_landscape.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/UIPlayer/Script/UIPlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/UIPlayer/Script/UIPlayerHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/UIPlayer/Script/UIPlayerMana.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/UIPlayer/Script/UIPlayerMana.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +131,9 @@
       <workItem from="1725796092208" duration="21867000" />
       <workItem from="1725870883447" duration="10445000" />
       <workItem from="1725890089308" duration="9330000" />
-      <workItem from="1725907011761" duration="4402000" />
+      <workItem from="1725907011761" duration="4592000" />
+      <workItem from="1726056255443" duration="5011000" />
+      <workItem from="1726061674956" duration="8340000" />
     </task>
     <servers />
   </component>
