@@ -47,24 +47,24 @@ public class DropItem : MonoBehaviour
         {
             return false;
         }
-        InventoryItem slotInItem = GetItemInSlot();
-        
-            if (IsHaveEmptySpaceInForwardDirection())
-            {
-                var item = slotInItem.GetItemObject();
-                ShrinkingObjects();
-                SpawnDropItem(item);
-            }
-            else
-            {
-                var item = slotInItem.GetItemObject();
-                var dropPosition = GetDropPosition();
-                ShrinkingObjects();
-                SpawnDropItem(item, dropPosition);
-            }
 
-            return true;
-            
+        InventoryItem slotInItem = GetItemInSlot();
+        bool canDrop = IsHaveEmptySpaceInForwardDirection();
+
+        var item = slotInItem.GetItemObject();
+        ShrinkingObjects();
+
+        if (canDrop)
+        {
+            SpawnDropItem(item);
+        }
+        else
+        {
+            var dropPosition = player.transform.position; // Прямо на позиции игрока
+            SpawnDropItem(item, dropPosition);
+        }
+
+        return true;
     }
 
     public void SpawnDropItem(ItemObject item, Vector3? dropPosition = null)
@@ -83,10 +83,7 @@ public class DropItem : MonoBehaviour
 
     private Vector3 GetDropPosition()
     {
-        if (IsHaveEmptySpaceInForwardDirection())
-            return player.transform.position + player.transform.forward * distance;
-        else
-            return player.transform.position;
+        return player.transform.position + player.transform.forward * distance;
     }
 
     public InventoryItem GetItemInSlot()

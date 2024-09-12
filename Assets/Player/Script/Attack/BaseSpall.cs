@@ -6,27 +6,48 @@ public class BaseSpall : MonoBehaviour
     private const float LifeTime = 3f;
     [SerializeField] private CharacterMagicSO playerMana;
     [SerializeField] private PlayerAttackSO playerDamage;
-    
-    private void Awake()
+
+
+    private void Update()
     {
-        Destroy(gameObject,LifeTime);
+        if(playerMana.manaCharacter <= playerDamage.manaFlow)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    
     private void OnTriggerEnter(Collider other)
     {
         BehaviourEnemy enemy = other.GetComponent<BehaviourEnemy>();
-
-        if (enemy != null)
+        if (CanCastSpell())
         {
-            enemy.TakeDamage(playerDamage.attackDamage);
-            Destroy(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+            if (enemy != null)
+            {
 
-       
+                enemy.TakeDamage(playerDamage.attackDamage);
+
+                Destroy(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+
+            ConsumeMana();
+        }
+        
+
+
+    }
+    private bool CanCastSpell()
+    {
+        // Check if there is enough mana to cast the spell
+        return playerMana.manaCharacter > playerDamage.manaFlow;
+    }
+
+    private void ConsumeMana()
+    {
+        // Deduct the mana cost from the player's mana
+        playerMana.manaCharacter -= playerDamage.manaFlow;
     }
 }
