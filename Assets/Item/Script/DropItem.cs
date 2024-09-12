@@ -35,8 +35,6 @@ public class DropItem : MonoBehaviour
         if (slotInItem == null)
             return false;
         
-        if (!IsHaveEmptySpaceInForwardDirection())
-            return false;
 
         return true;
 
@@ -49,21 +47,23 @@ public class DropItem : MonoBehaviour
         }
 
         InventoryItem slotInItem = GetItemInSlot();
-        bool canDrop = IsHaveEmptySpaceInForwardDirection();
+       
 
         var item = slotInItem.GetItemObject();
+        bool isNeedSpawnUnderPlayer = !IsHaveEmptySpaceInForwardDirection();
         ShrinkingObjects();
 
-        if (canDrop)
-        {
-            SpawnDropItem(item);
-        }
-        else
+        if (isNeedSpawnUnderPlayer)
         {
             var dropPosition = player.transform.position; // Прямо на позиции игрока
             SpawnDropItem(item, dropPosition);
+            
         }
-
+        else
+        {
+            SpawnDropItem(item);
+        }
+        
         return true;
     }
 
@@ -78,6 +78,7 @@ public class DropItem : MonoBehaviour
         float dropDistance = 1f;
         bool canDrop = !Physics.Raycast(transform.position, transform.forward, dropDistance * customDropDistance,
             dropItemLayer);
+        Debug.Log(canDrop);
         return canDrop;
     }
 

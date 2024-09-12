@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a6bd6aa4-242a-4a70-82df-7493e266aa17" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Item/Prefab/HealthItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Prefab/HealthItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Item/Prefab/ManaFlask.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Prefab/ManaFlask.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Item/Script/DropItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Script/DropItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Attack/BaseSpall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Attack/BaseSpall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerAttack.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerAttack.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Attack/PlayerAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Attack/PlayerAttack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerMana.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerMana.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +26,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/59/c1dcb750/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/7b/2fc8916a/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/GetInventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/Script/Attack/Script/ManaUsed.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/UIInventory/Script/InventoryInputUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core/Runtime/RenderGraph/RenderGraphResourceRegistry.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -124,6 +127,7 @@
       <workItem from="1725907011761" duration="4592000" />
       <workItem from="1726056255443" duration="5011000" />
       <workItem from="1726061674956" duration="10335000" />
+      <workItem from="1726152675219" duration="10429000" />
     </task>
     <servers />
   </component>

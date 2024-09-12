@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7652195608453430597}
   - component: {fileID: 4405071000308109269}
   - component: {fileID: 3283091768214696944}
-  m_Layer: 2
+  m_Layer: 6
   m_Name: ManaFlask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
