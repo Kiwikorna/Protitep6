@@ -2256,7 +2256,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellSpawnPoint: {fileID: 538637891}
-  playerSpell: {fileID: 11400000, guid: 647ceb73ffe9a524cb954b3a7a98e5f8, type: 2}
+  playerSpellAttackSo: {fileID: 0}
+  playerMana: {fileID: 11400000, guid: d145b4d42de32334c96a4f5c767081e2, type: 2}
 --- !u!224 &564484175 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4086467025468203153, guid: 5358222c95684e64393b86c816a21252, type: 3}
@@ -4808,7 +4809,7 @@ Transform:
   m_GameObject: {fileID: 1048860518}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.413, z: 0.717}
+  m_LocalPosition: {x: 0, y: 1.413, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4848,7 +4849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1048860519}
-  distance: 2
+  distance: 1
   inventoryInputUI: {fileID: 585915008}
   dropItemLayer:
     serializedVersion: 2
@@ -5951,6 +5952,53 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4086467025468203153, guid: 5358222c95684e64393b86c816a21252, type: 3}
   m_PrefabInstance: {fileID: 1399232018}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1377045402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1377045404}
+  - component: {fileID: 1377045403}
+  m_Layer: 0
+  m_Name: ManaFlowAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1377045403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377045402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45f8fe5463f27ab4a8d094ac17a99007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAttack: {fileID: 538637894}
+  spell: {fileID: 11400000, guid: 647ceb73ffe9a524cb954b3a7a98e5f8, type: 2}
+  playerManaSo: {fileID: 11400000, guid: d145b4d42de32334c96a4f5c767081e2, type: 2}
+--- !u!4 &1377045404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377045402}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1389723816
 GameObject:
   m_ObjectHideFlags: 0
@@ -8699,11 +8747,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2955252566065838728, guid: 14d5add3728cb7942ba03b357cbe368d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.717
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476939945655963855, guid: 14d5add3728cb7942ba03b357cbe368d, type: 3}
+      propertyPath: distance
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3476939945655963855, guid: 14d5add3728cb7942ba03b357cbe368d, type: 3}
       propertyPath: inventoryInputUI
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476939945655963855, guid: 14d5add3728cb7942ba03b357cbe368d, type: 3}
+      propertyPath: customDropDistance
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3476939945655963855, guid: 14d5add3728cb7942ba03b357cbe368d, type: 3}
       propertyPath: dropItemLayer.m_Bits
@@ -8720,6 +8776,10 @@ PrefabInstance:
     - target: {fileID: 8870742196652603271, guid: 14d5add3728cb7942ba03b357cbe368d, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8870742196652603271, guid: 14d5add3728cb7942ba03b357cbe368d, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8998071356570800926, guid: 14d5add3728cb7942ba03b357cbe368d, type: 3}
       propertyPath: m_IsTrigger
@@ -8920,6 +8980,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eneme
       objectReference: {fileID: 0}
+    - target: {fileID: 1208911921281849053, guid: 827fd43bb8d7e23499657355b2ed2bab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5266274178277263018, guid: 827fd43bb8d7e23499657355b2ed2bab, type: 3}
       propertyPath: m_LocalScale.y
       value: 1
@@ -9090,3 +9154,4 @@ SceneRoots:
   - {fileID: 128530250}
   - {fileID: 1523791782}
   - {fileID: 1734926256}
+  - {fileID: 1377045404}

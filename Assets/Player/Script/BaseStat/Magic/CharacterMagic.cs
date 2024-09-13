@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CharacterMagic : MonoBehaviour
 {
-    [SerializeField] private CharacterMagicSO _magicSO;
+    [SerializeField] private CharacterManaSO _magicSO;
     [SerializeField] private InventoryUsing inventoryUsing;
 
     private void Awake()

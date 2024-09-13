@@ -3,7 +3,7 @@ using UnityEngine;
 using TMPro;
 public class UIPlayerMana : MonoBehaviour
 {
-    [SerializeField] private CharacterMagicSO player;
+    [SerializeField] private CharacterManaSO player;
     [SerializeField] private TextMeshProUGUI text;
 
 

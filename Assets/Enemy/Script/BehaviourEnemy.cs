@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BehaviourEnemy : MonoBehaviour
 {
-   [SerializeField] private BaseSpall spell;
+   [SerializeField] private SpellProjectile spell;
    [SerializeField] private CharacterHealthSO enemyHealth;
    public void TakeDamage(int damage)
    {

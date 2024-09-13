@@ -122,8 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48daea56e83eb24f96b51a78aa6afba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMana: {fileID: 11400000, guid: d145b4d42de32334c96a4f5c767081e2, type: 2}
   playerDamage: {fileID: 11400000, guid: 647ceb73ffe9a524cb954b3a7a98e5f8, type: 2}
+  spellDistance: 4
 --- !u!54 &9215489467568832249
 Rigidbody:
   m_ObjectHideFlags: 0
