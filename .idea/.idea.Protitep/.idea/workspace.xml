@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bd6aa4-242a-4a70-82df-7493e266aa17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Player/Script/Attack/PlayerSpell.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Script/BehaviourEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Script/BehaviourEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Attack/BaseSpall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Attack/SpellProjectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Attack/BaseSpall.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Attack/SpellProjectile.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Attack/PlayerAttack.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Attack/PlayerAttack.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Attack/PlayerSpell.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Attack/Prefab/Spell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Attack/Prefab/Spell.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Attack/Script/ManaUsed.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Attack/Script/ManaUsed.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Magic/CharacterMagic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Magic/CharacterMagic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/CharacterMagicSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/CharacterMagicSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/PlayerAttackSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/SpellSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/PlayerAttackSO.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/SpellSO.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIPlayer/Script/UIPlayerMana.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/UIPlayer/Script/UIPlayerMana.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Attack/PlayerSpell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Attack/PlayerSpell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Attack/SpellProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Attack/SpellProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerAttack.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerAttack.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerMana.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerMana.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +128,7 @@
       <workItem from="1726061674956" duration="10335000" />
       <workItem from="1726152675219" duration="11119000" />
       <workItem from="1726235030748" duration="6185000" />
-      <workItem from="1726247345329" duration="6446000" />
+      <workItem from="1726247345329" duration="9122000" />
     </task>
     <servers />
   </component>

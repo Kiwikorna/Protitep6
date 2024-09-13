@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1228941765567419161, guid: f8cfd38f3b9130c42be1466ae47e5497, type: 3}
   attackDamage: 30
-  manaFlow: 15
+  manaCost: 43
   speed: 5
