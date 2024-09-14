@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7e3f47099d768c489f725a63e4f8d02, type: 3}
-  m_Name: OwnerPlayerAttack
+  m_Name: OwnerPlayerSpell
   m_EditorClassIdentifier: 
   prefab: {fileID: 1228941765567419161, guid: f8cfd38f3b9130c42be1466ae47e5497, type: 3}
   attackDamage: 30
