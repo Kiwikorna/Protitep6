@@ -37,8 +37,9 @@ public class PlayerController : MonoBehaviour
 
         Vector3 moveDir = new Vector3(_move.x, 0f, _move.y); // Нормализация направления движения
         _body.AddForce(moveDir * (speed * Time.fixedDeltaTime), ForceMode.Acceleration);
-
-        Quaternion rotate = Quaternion.LookRotation(moveDir, Vector3.up);
+        
+        var velocity = _body.linearVelocity;
+        Quaternion rotate = Quaternion.LookRotation(velocity, Vector3.up);
         _body.rotation = Quaternion.Slerp(_body.rotation, rotate, rotationSpeed * Time.deltaTime);
     }
 
