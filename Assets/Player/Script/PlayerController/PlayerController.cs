@@ -81,10 +81,15 @@ public class PlayerController : MonoBehaviour
         {
             _body.linearVelocity = new Vector3(0, _body.linearVelocity.y, 0);
             
+
         }
 
         isRun = _body.linearVelocity != Vector3.zero;
     }
 
     public bool GetIsRun() => isRun;
+    public void SetSpeed(float value)
+    {
+         speed = value;
+    }
 }

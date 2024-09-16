@@ -9,15 +9,16 @@ public class DropItem : MonoBehaviour
     [SerializeField] private InventoryManager inventoryInputUI;
     [SerializeField] private LayerMask dropItemLayer;
     [SerializeField] private float customDropDistance;
+    [SerializeField] private Controller buttonRemove;
 
     private void Awake()
     {
-        Controller.Instance.OnDropItemButtonPressed += InputRemoveItem;
+        buttonRemove.OnDropItemButtonPressed += InputRemoveItem;
     }
 
     private void OnDisable()
     {
-        Controller.Instance.OnDropItemButtonPressed -= InputRemoveItem;
+        buttonRemove.OnDropItemButtonPressed -= InputRemoveItem;
     }
 
     private void InputRemoveItem()

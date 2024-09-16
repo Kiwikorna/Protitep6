@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bd6aa4-242a-4a70-82df-7493e266aa17" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Attack/PlayerSpell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Attack/PlayerSpell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerAttack.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerAttack.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/DropItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Script/DropItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +134,8 @@
       <workItem from="1726235030748" duration="6185000" />
       <workItem from="1726247345329" duration="9122000" />
       <workItem from="1726344157388" duration="364000" />
+      <workItem from="1726483594583" duration="10487000" />
+      <workItem from="1726501148286" duration="2009000" />
     </task>
     <servers />
   </component>
