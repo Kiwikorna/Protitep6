@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7e3f47099d768c489f725a63e4f8d02, type: 3}
-  m_Name: OwnerPlayerSpell
+  m_Script: {fileID: 11500000, guid: 4dac89aa107140948964a94bf3b5ac63, type: 3}
+  m_Name: SpellSlowDown
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1228941765567419161, guid: f8cfd38f3b9130c42be1466ae47e5497, type: 3}
+  prefab: {fileID: 7547424608900004736, guid: d853e5f5fc8e71d47a52d0d62d77b1b6, type: 3}
   attackDamage: 30
-  manaCost: 43
+  manaCost: 20
   speed: 5
+  slowDown: 3.4

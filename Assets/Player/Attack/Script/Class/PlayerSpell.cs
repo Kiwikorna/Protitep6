@@ -14,17 +14,20 @@ public class SpellCaster : MonoBehaviour
 
    private bool _isCastingSpell = false;
 
-   private void Update()
+   private void Start()
+   {
+      Controller.Instance.onCastBaseSpellButtonPressed += SpellCast;
+   }
+   private void SpellCast()
    {
       if (playerMana.manaCharacter > playerSpellSo.manaCost)
       {
-         if (Input.GetKeyDown(KeyCode.Space) && !_isCastingSpell)
+         if (!_isCastingSpell)
          {
             StartCoroutine(DelaySpell());
          }
       }
    }
-
    private IEnumerator DelaySpell()
    {
       _isCastingSpell = true;

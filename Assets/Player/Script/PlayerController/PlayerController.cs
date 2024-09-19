@@ -50,8 +50,5 @@ public class PlayerController : MonoBehaviour
 
     public bool GetIsRun() => isRun;
 
-    public void SetSpeed(float value)
-    {
-        speed = value;
-    }
+    
 }

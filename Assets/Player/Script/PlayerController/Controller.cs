@@ -12,6 +12,7 @@ public class Controller : MonoBehaviour
     private List<ActionClassController> listController;
     private bool _isInteractedHandler = false;
     public event Action OnDropItemButtonPressed ;
+    public event Action onCastBaseSpellButtonPressed;
     private bool _isUseIntarection = false;
     
 
@@ -25,6 +26,7 @@ public class Controller : MonoBehaviour
             new (_inputSystemActions.Player.Interact,InteractHandler),
             new (_inputSystemActions.Player.DropItemInventory,InteractionDropItemHandler),
             new(_inputSystemActions.Player.UseItem,UseInteractionItem),
+            new(_inputSystemActions.Player.CastBaseSpell,CastBaseSpellButton)
            
         };
 
@@ -70,6 +72,14 @@ public class Controller : MonoBehaviour
         if (context.performed)
         {
             OnDropItemButtonPressed?.Invoke();
+        }
+    }
+
+    private void CastBaseSpellButton(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            onCastBaseSpellButtonPressed?.Invoke();
         }
     }
 

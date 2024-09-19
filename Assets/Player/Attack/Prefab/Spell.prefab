@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerDamage: {fileID: 11400000, guid: 647ceb73ffe9a524cb954b3a7a98e5f8, type: 2}
   spellDistance: 4
+  enemyPathFinding: {fileID: 3097477149040466210, guid: 827fd43bb8d7e23499657355b2ed2bab, type: 3}
 --- !u!54 &9215489467568832249
 Rigidbody:
   m_ObjectHideFlags: 0

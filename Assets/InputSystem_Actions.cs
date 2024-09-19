@@ -110,15 +110,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Attack"",
-                    ""type"": ""Button"",
-                    ""id"": ""0200a2d4-069a-4928-88e9-0dedf25eb085"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Look"",
                     ""type"": ""Value"",
                     ""id"": ""d361d7ac-f4fc-4555-ab90-d8a138e7ba51"",
@@ -126,6 +117,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""CastBaseSpell"",
+                    ""type"": ""Button"",
+                    ""id"": ""2108dfe3-c280-4f2d-80c7-151c0e929434"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -439,72 +439,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""7d7565ea-4b90-4d27-8975-c2d3767c8be4"",
-                    ""path"": ""<Gamepad>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""13337fc6-c57c-4594-97a9-eeb042921c5a"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7a7a00ec-ab01-4e4d-bd08-810cd74e4fde"",
-                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Touch"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b450cd64-b5c4-4b92-9b4f-4ec57e543490"",
-                    ""path"": ""<Joystick>/trigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Joystick"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""679d9ccd-2e65-4b7d-b9d9-b9b8e9fed975"",
-                    ""path"": ""<XRController>/{PrimaryAction}"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""XR"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""60a72eca-4003-4942-a3d4-b9aef8757103"",
-                    ""path"": ""<Keyboard>/enter"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""de1890f3-fcc4-4cbc-9150-9003579890b6"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
@@ -533,6 +467,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Joystick"",
                     ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""769a1f67-76f2-477e-b14d-e166fa0161fc"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""CastBaseSpell"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1226,8 +1171,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_DropItemInventory = m_Player.FindAction("DropItemInventory", throwIfNotFound: true);
         m_Player_UseItem = m_Player.FindAction("UseItem", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
-        m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
+        m_Player_CastBaseSpell = m_Player.FindAction("CastBaseSpell", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
@@ -1317,8 +1262,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_DropItemInventory;
     private readonly InputAction m_Player_UseItem;
     private readonly InputAction m_Player_Move;
-    private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_Look;
+    private readonly InputAction m_Player_CastBaseSpell;
     public struct PlayerActions
     {
         private @InputSystem_Actions m_Wrapper;
@@ -1332,8 +1277,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         public InputAction @DropItemInventory => m_Wrapper.m_Player_DropItemInventory;
         public InputAction @UseItem => m_Wrapper.m_Player_UseItem;
         public InputAction @Move => m_Wrapper.m_Player_Move;
-        public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputAction @Look => m_Wrapper.m_Player_Look;
+        public InputAction @CastBaseSpell => m_Wrapper.m_Player_CastBaseSpell;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1370,12 +1315,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
-            @Attack.started += instance.OnAttack;
-            @Attack.performed += instance.OnAttack;
-            @Attack.canceled += instance.OnAttack;
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @CastBaseSpell.started += instance.OnCastBaseSpell;
+            @CastBaseSpell.performed += instance.OnCastBaseSpell;
+            @CastBaseSpell.canceled += instance.OnCastBaseSpell;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1407,12 +1352,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
-            @Attack.started -= instance.OnAttack;
-            @Attack.performed -= instance.OnAttack;
-            @Attack.canceled -= instance.OnAttack;
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @CastBaseSpell.started -= instance.OnCastBaseSpell;
+            @CastBaseSpell.performed -= instance.OnCastBaseSpell;
+            @CastBaseSpell.canceled -= instance.OnCastBaseSpell;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1612,8 +1557,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnDropItemInventory(InputAction.CallbackContext context);
         void OnUseItem(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
-        void OnAttack(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnCastBaseSpell(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
