@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class ComponentSpellSlowDown : MonoBehaviour
 {
-    [SerializeField] private float slowDown;
-    [SerializeField] private float timeSlowDown;
+     private float _slowDown;
+     private float _timeSlowDown;
     private EnemyPathFinding _enemyPathFinding;
     private SlowDownEffect _slowDownEffect;
     private void OnTriggerEnter(Collider other)
@@ -16,7 +16,9 @@ public class ComponentSpellSlowDown : MonoBehaviour
         if (spellProjectile != null)
         {
              _enemyPathFinding = GetComponent<EnemyPathFinding>();
-             _slowDownEffect = new SlowDownEffect(slowDown,timeSlowDown);
+             _slowDown = 3;
+             _timeSlowDown = 1;
+             _slowDownEffect = new SlowDownEffect(_slowDown,_timeSlowDown);
 
             
             StartCoroutine(TimeSlowDown());
@@ -30,4 +32,6 @@ public class ComponentSpellSlowDown : MonoBehaviour
         yield return new WaitForSeconds(_slowDownEffect.TimeSlowDown);
         _enemyPathFinding.GetNavMeshAgent().speed += _slowDownEffect.SlowDown;
     }
+
+    public float GetTimeSlowDownDelete() => _timeSlowDown + 2f;
 }

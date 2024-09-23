@@ -12,4 +12,6 @@ public class SpellSO : ScriptableObject
 
     public int speed;
 
+    public bool isSpellEffect;
+
 }

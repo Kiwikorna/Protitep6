@@ -15,4 +15,5 @@ MonoBehaviour:
   prefab: {fileID: 1228941765567419161, guid: f8cfd38f3b9130c42be1466ae47e5497, type: 3}
   attackDamage: 45
   manaCost: 43
-  speed: 3
+  speed: 6
+  isSpellEffect: 1

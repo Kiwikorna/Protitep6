@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bd6aa4-242a-4a70-82df-7493e266aa17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SlowDownEffect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Script/TakeDamageEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Script/TakeDamageEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/ScriptableObject/Object/OwnerEnemyHealth.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/ScriptableObject/Object/OwnerEnemyHealth.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Prefab/SpellSlowDown.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Prefab/SpellSlowDown.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellSlowDownProjectile.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellSlowDownProjectile.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SlowDownEffect.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/ComponentSpellSlowDown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/ComponentSpellSlowDown.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerBaseSpell.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/OwnerPlayerBaseSpell.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/SpellSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/SpellSO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-NavMeshSurface.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-NavMeshSurface.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +141,9 @@
       <workItem from="1726744467895" duration="11153000" />
       <workItem from="1726758100451" duration="8334000" />
       <workItem from="1726820880713" duration="3814000" />
-      <workItem from="1726859769687" duration="3510000" />
+      <workItem from="1726859769687" duration="3593000" />
+      <workItem from="1727017117248" duration="3937000" />
+      <workItem from="1727079939070" duration="1623000" />
     </task>
     <servers />
   </component>
