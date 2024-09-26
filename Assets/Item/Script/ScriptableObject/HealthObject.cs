@@ -7,7 +7,7 @@ public class HealthObject : ItemObject,IHealthFlask
    public int healthFlask;
 
 
-   public int HealthValue
+   public float HealthValue
    {
       get => healthFlask;
       set => value = healthFlask;

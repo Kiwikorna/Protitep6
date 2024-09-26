@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObject/Item/ManaItem", fileName = "newManaItem")]
 public class MagicObject : ItemObject,IManaFlask
 {
-    public int manaItem;
-    public int ManaValue
+    public float manaItem;
+    public float ManaValue
     {
         get => manaItem;
         set => value = manaItem;

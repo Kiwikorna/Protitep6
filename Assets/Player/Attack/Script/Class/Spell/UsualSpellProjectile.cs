@@ -2,13 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public  class SpellProjectile : BaseSpellProjectile
+public  class UsualSpellProjectile : BaseSpellProjectile
 {
-
-    [SerializeField] private SpellSO playerDamage;
-    [SerializeField] private float spellDistance;
-   
     private Vector3 _startPosition;
 
     private void Awake()
@@ -19,16 +16,19 @@ public  class SpellProjectile : BaseSpellProjectile
     private void Update()
     {
 
-        SpellProjectileFlyed();
+        SpellProjectileFly();
 
     }
 
-    public override void SpellProjectileFlyed()
+    public override void SpellProjectileFly()
     {
         float distance = Vector3.Distance(transform.position, _startPosition);
-        if (distance >= spellDistance)
+        if (distance >= SpellRange)
             Destroy(gameObject);
     }
+
+    
+ 
 
     private  void  OnTriggerEnter(Collider other)
     {
@@ -36,7 +36,7 @@ public  class SpellProjectile : BaseSpellProjectile
         
         if (enemy != null)
         {
-            enemy.TakeDamage(playerDamage.attackDamage);
+            enemy.TakeDamage(SpellDamage);
             
         }
         Destroy(gameObject);

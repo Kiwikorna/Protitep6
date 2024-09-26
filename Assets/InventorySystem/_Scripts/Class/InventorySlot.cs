@@ -8,7 +8,8 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 {
     [SerializeField]private Image image;
     [SerializeField] private Color selectedSlot, desealectedSlot;
-   
+
+    private ItemObject _itemObject;
 
     public void Select()
     {
@@ -48,4 +49,19 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         }
         
     }
+    
+    // Резервируем слот для определенного предмета
+    public void ReserveForItem(ItemObject item)
+    {
+        _itemObject = item;
+    }
+
+    // Проверяем, зарезервирован ли слот для другого предмета
+    public bool IsReservedForOtherItem(ItemObject item)
+    {
+        return _itemObject != null && _itemObject != item;
+    }
+
+    // Проверка, зарезервирован ли слот
+    public bool IsReserved() => _itemObject != null;
 }

@@ -12,15 +12,5 @@ public class SlowDownEffect
         SlowDown = slowDown;
         TimeSlowDown = timeSlowDown;
     }
-    /*public void OnTriggerEnter(Collider other)
-    {
-        EnemyPathFinding enemyPathFinding = other.GetComponent<EnemyPathFinding>();
-
-        if (enemyPathFinding != null)
-        {
-            enemyPathFinding.GetNavMeshAgent().speed -= SlowDown;
-        }
-    }*/
-
-   
+    
 }

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6809802781811463710}
   - component: {fileID: 6092422242432042484}
   - component: {fileID: 5309846097797613034}
-  - component: {fileID: -7766995989307020143}
   - component: {fileID: 9215489467568832249}
+  - component: {fileID: 6090130543111263151}
   m_Layer: 7
   m_Name: Spell
   m_TagString: Untagged
@@ -110,21 +110,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7766995989307020143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228941765567419161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e48daea56e83eb24f96b51a78aa6afba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerDamage: {fileID: 11400000, guid: 647ceb73ffe9a524cb954b3a7a98e5f8, type: 2}
-  spellDistance: 4
-  enemyPathFinding: {fileID: 3097477149040466210, guid: 827fd43bb8d7e23499657355b2ed2bab, type: 3}
 --- !u!54 &9215489467568832249
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -152,3 +137,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6090130543111263151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228941765567419161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48daea56e83eb24f96b51a78aa6afba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellPrefab: {fileID: 1228941765567419161}
+  <SpellDamage>k__BackingField: 55
+  <SpellManaCost>k__BackingField: 34
+  <SpellRange>k__BackingField: 52
+  <SpellSpeed>k__BackingField: 5

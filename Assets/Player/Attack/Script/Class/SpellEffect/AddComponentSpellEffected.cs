@@ -5,7 +5,7 @@ using UnityEngine;
 public class AddComponentSpellEffected : MonoBehaviour
 {
     private ComponentSpellSlowDown _spellSlowDown;
-    [SerializeField] private SpellSO spellSo;
+
 
     private void Awake()
     {
@@ -14,9 +14,9 @@ public class AddComponentSpellEffected : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        SpellProjectile spellProjectile = other.GetComponent<SpellProjectile>();
+        BaseSpellProjectile spellProjectile = other.GetComponent<BaseSpellProjectile>();
         
-        if (spellProjectile != null && gameObject.GetComponent<ComponentSpellSlowDown>() == null  && spellSo.isSpellEffect)
+        if (spellProjectile != null && gameObject.GetComponent<ComponentSpellSlowDown>() == null)
         {
             _spellSlowDown = gameObject.AddComponent<ComponentSpellSlowDown>();
             StartCoroutine(EffectDestroed());

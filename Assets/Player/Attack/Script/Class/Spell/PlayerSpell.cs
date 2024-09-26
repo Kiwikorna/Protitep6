@@ -8,9 +8,10 @@ using UnityEngine.Serialization;
 public class SpellCaster : MonoBehaviour
 {
    [SerializeField] private Transform spellSpawnPoint;
-   [SerializeField] private SpellSO playerSpellSo;
    [SerializeField] private CharacterManaSO playerMana;
    [SerializeField] private float spellDelayPressButton;
+    private GameObject _spellPrefab;
+   [SerializeField]private UsualSpellProjectile _baseSpellProjectile;
 
    private bool _isCastingSpell = false;
 
@@ -20,11 +21,14 @@ public class SpellCaster : MonoBehaviour
    }
    private void SpellCast()
    {
-      if (playerMana.manaCharacter > playerSpellSo.manaCost)
+      
+      
+      if (playerMana.manaCharacter > _baseSpellProjectile.SpellManaCost)
       {
          if (!_isCastingSpell)
          {
             StartCoroutine(DelaySpell());
+            
          }
       }
    }
@@ -32,11 +36,13 @@ public class SpellCaster : MonoBehaviour
    {
       _isCastingSpell = true;
       yield return new WaitForSeconds(spellDelayPressButton);
-      var spell = Instantiate(playerSpellSo.prefab, spellSpawnPoint.position, spellSpawnPoint.rotation);
-      spell.GetComponent<Rigidbody>().linearVelocity = spellSpawnPoint.forward * playerSpellSo.speed;
-      playerMana.manaCharacter -= playerSpellSo.manaCost;
+      var spell = Instantiate(_baseSpellProjectile.GetSpellPrefab(), spellSpawnPoint.position, spellSpawnPoint.rotation);
+      
+      spell.GetComponent<Rigidbody>().linearVelocity = spellSpawnPoint.forward * _baseSpellProjectile.SpellSpeed;
+      playerMana.manaCharacter -= _baseSpellProjectile.SpellManaCost;
       _isCastingSpell = false;
    }
-
+   
+   
    
 }

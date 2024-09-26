@@ -45,7 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellSpawnPoint: {fileID: 2108631619093545236}
-  playerSpellSo: {fileID: 11400000, guid: 647ceb73ffe9a524cb954b3a7a98e5f8, type: 2}
   playerMana: {fileID: 11400000, guid: d145b4d42de32334c96a4f5c767081e2, type: 2}
-  spellDelayPressButton: 2.2
-  spellCooldownAfterUsed: 10
+  spellDelayPressButton: 0

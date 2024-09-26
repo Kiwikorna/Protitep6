@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class EnemyHealth
 {
-     public int Health { get;  set; }
+     public float Health { get;  set; }
 
-    public EnemyHealth(int enemyHealth)
+    public EnemyHealth(float enemyHealth)
     {
         Health = enemyHealth;
     }

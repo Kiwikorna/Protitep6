@@ -11,7 +11,7 @@ public class ComponentSpellSlowDown : MonoBehaviour
     private SlowDownEffect _slowDownEffect;
     private void OnTriggerEnter(Collider other)
     {
-        SpellProjectile spellProjectile = other.GetComponent<SpellProjectile>();
+        BaseSpellProjectile spellProjectile = other.GetComponent<BaseSpellProjectile>();
 
         if (spellProjectile != null)
         {
