@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "ScriptableObject/Item/ManaItem", fileName = "newManaItem")]
-public class MagicObject : ItemObject,IManaFlask
+public class Magic : Item,IManaFlask
 {
     public float manaItem;
     public float ManaValue

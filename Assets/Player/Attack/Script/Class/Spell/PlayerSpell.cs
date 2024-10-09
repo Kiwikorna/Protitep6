@@ -11,13 +11,14 @@ public class SpellCaster : MonoBehaviour
    [SerializeField] private CharacterManaSO playerMana;
    [SerializeField] private float spellDelayPressButton;
     private GameObject _spellPrefab;
-   [SerializeField]private UsualSpellProjectile _baseSpellProjectile;
+  private BaseSpellProjectile _baseSpellProjectile;
 
    private bool _isCastingSpell = false;
 
    private void Start()
    {
-      Controller.Instance.onCastBaseSpellButtonPressed += SpellCast;
+      PlayerInput.Instance.OnCastBaseSpellButtonPressed += SpellCast;
+      
    }
    private void SpellCast()
    {

@@ -11,10 +11,10 @@ public class CharacterMagic : MonoBehaviour
         inventoryUsing.OnItemUsed += Magic;
     }
 
-    private void Magic(ItemObject itemObject)
+    private void Magic(Item item)
     {
-        itemObject = InventoryManager.Instance.GetSelectedSlot(true);
-        if (itemObject is IManaFlask magicObject)
+        item = InventoryManager.Instance.GetSelectedSlot(true);
+        if (item is IManaFlask magicObject)
         {
             _magicSO.manaCharacter += magicObject.ManaValue;
         }

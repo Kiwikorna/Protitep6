@@ -27,17 +27,17 @@ public class InventoryManager : MonoBehaviour
         Instance = this;
 
 
-        input.onInventoryButten += ChangeSelectedSlot;
+        input.OnInventoryInputButton += ChangeSelectedSlot;
         
         // Пример привязки HealthObject к слоту 0
-        BindItemToSlot(typeof(HealthObject), 0);
+        BindItemToSlot(typeof(Health), 0);
         // Пример привязки другого предмета (например, WeaponObject) к слоту 1
-        BindItemToSlot(typeof(MagicObject), 1);
+        BindItemToSlot(typeof(Magic), 1);
     }
 
     private void OnDestroy()
     {
-        input.onInventoryButten -= ChangeSelectedSlot;
+        input.OnInventoryInputButton -= ChangeSelectedSlot;
     }
 
     private void ChangeSelectedSlot(int newValue)
@@ -59,7 +59,7 @@ public class InventoryManager : MonoBehaviour
     }
 
     // Проверка, есть ли у предмета привязанный слот
-    public bool TryGetBoundSlot(ItemObject item, out InventorySlot boundSlot)
+    public bool TryGetBoundSlot(Item item, out InventorySlot boundSlot)
     {
         boundSlot = null;
         if (_itemSlotBindings.TryGetValue(item.GetType(), out int slotIndex))
@@ -70,7 +70,7 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    public bool AddItem(ItemObject item)
+    public bool AddItem(Item item)
     {
         // Проверяем, есть ли у предмета привязанный слот
         if (TryGetBoundSlot(item, out InventorySlot reservedSlot))
@@ -84,10 +84,10 @@ public class InventoryManager : MonoBehaviour
                 SpawnNewItem(item, reservedSlot);
                 return true;
             }
-            else if (itemInSlot.GetItemObject() == item && itemInSlot.count < _maxSizeSlot)
+            else if (itemInSlot.GetItem() == item && itemInSlot.GetItemCount() < _maxSizeSlot)
             {
                 // Если слот уже содержит этот предмет, увеличиваем количество
-                itemInSlot.count++;
+                itemInSlot.IncriminationItemCount();
                 itemInSlot.RefreshCount();
                 return true;
             }
@@ -110,7 +110,7 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    public ItemObject GetSelectedSlot(bool use)
+    public Item GetSelectedSlot(bool use)
     {
         if (_selectSlot < 0 || _selectSlot >=  inventorySlots.Length)
         {
@@ -123,12 +123,12 @@ public class InventoryManager : MonoBehaviour
 
         if (itemInSlot != null)
         {
-          ItemObject item =  itemInSlot.GetItemObject();
+          Item item =  itemInSlot.GetItem();
 
             if (use == true)
             {
-                itemInSlot.count--;
-                if (itemInSlot.count <= 0)
+                itemInSlot.DicriminationItemCount();
+                if (itemInSlot.GetItemCount() <= 0)
                 {
                     Destroy(itemInSlot.gameObject);
                 }
@@ -147,12 +147,12 @@ public class InventoryManager : MonoBehaviour
     }
 
   
-    public void SpawnNewItem(ItemObject item, InventorySlot slot)
+    public void SpawnNewItem(Item item, InventorySlot slot)
     {
         GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
 
         InventoryItem inventoryItem = newItemGo.GetComponent<InventoryItem>();
-        inventoryItem.Intialized(item);
+        inventoryItem.ImageIntializedAndRefreshItem(item);
 
         // Резервируем слот для этого предмета
         slot.ReserveForItem(item);

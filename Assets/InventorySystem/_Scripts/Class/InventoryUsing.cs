@@ -4,7 +4,7 @@ using UnityEngine;
 public class InventoryUsing : MonoBehaviour
 {
     public event Action OnAnyItemUsed;
-    public event Action<ItemObject> OnItemUsed; 
+    public event Action<Item> OnItemUsed; 
 
     private void Update()
     {
@@ -13,7 +13,7 @@ public class InventoryUsing : MonoBehaviour
 
     private void CheckItemUsing()
     {
-        if (Controller.Instance.GetInteractionUseHandler())
+        if (PlayerInput.Instance.GetInteractionUseHandler())
         {
             var itemObject = InventoryManager.Instance.GetSelectedSlot(true);
             if (itemObject != null)

@@ -32,7 +32,7 @@ public  class UsualSpellProjectile : BaseSpellProjectile
 
     private  void  OnTriggerEnter(Collider other)
     {
-        TakeDamageEnemy enemy = other.GetComponent<TakeDamageEnemy>();
+        Damage enemy = other.GetComponent<Damage>();
         
         if (enemy != null)
         {

@@ -1,25 +1,26 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-public class InventorySlotWithoutUse : MonoBehaviour,IDropHandler
+
+public class SpellItem : MonoBehaviour,IDropHandler
 {
     public void OnDrop(PointerEventData eventData)
     {
-        InventoryItem inventoryItem = eventData.pointerDrag.GetComponent<InventoryItem>();
+        InventoryItem item = eventData.pointerDrag.GetComponent<InventoryItem>();
         if (transform.childCount == 0)
         {
-            inventoryItem.SetAfterDragTransform(transform);
+            item.SetAfterDragTransform(transform);
         }
         else
         {
             Transform existedItemTransform = transform.GetChild(0);
 
-            Transform droppedItemSwap = inventoryItem.GetAfterDrag();
+            Transform droppedItemSwap = item.GetAfterDrag();
             
-            inventoryItem.SetAfterDragTransform(transform);
+            item.SetAfterDragTransform(transform);
             existedItemTransform.SetParent(droppedItemSwap);
 
             existedItemTransform.position = droppedItemSwap.position;
-            inventoryItem.transform.position = transform.position;
+            item.transform.position = transform.position;
 
         }
         

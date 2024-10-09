@@ -15,4 +15,6 @@ MonoBehaviour:
   prefab: {fileID: 2930756407638251696, guid: 8007ffe8d434c5544a8ec331d3933617, type: 3}
   sprite: {fileID: -1663736264, guid: 3e855cdd8f7c0944f9c7250db9d20b73, type: 3}
   stackable: 1
+  item: 0
+  isLocked: 1
   healthFlask: 50

@@ -4,23 +4,23 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class Controller : MonoBehaviour
+public class PlayerInput : MonoBehaviour
 {
-    public static Controller Instance { get; private set; }
-    private Vector2 _moveDirection = Vector2.zero;
+    public static PlayerInput Instance { get; private set; }
+    private Vector2 _move = Vector2.zero;
     private InputSystem_Actions _inputSystemActions;
-    private List<ActionClassController> listController;
+    private List<ActionClassController> _inputs;
     private bool _isInteractedHandler = false;
     public event Action OnDropItemButtonPressed ;
-    public event Action onCastBaseSpellButtonPressed;
-    private bool _isUseIntarection = false;
+    public event Action OnCastBaseSpellButtonPressed;
+    private bool _isUseInteraction = false;
     
 
 
     private void Awake()
     {
         _inputSystemActions = new InputSystem_Actions();
-        listController = new List<ActionClassController>
+        _inputs = new List<ActionClassController>
         {
             new (_inputSystemActions.Player.Move, Movement),
             new (_inputSystemActions.Player.Interact,InteractHandler),
@@ -30,7 +30,7 @@ public class Controller : MonoBehaviour
            
         };
 
-        foreach (var controller in listController)
+        foreach (var controller in _inputs)
         {
             controller.Action.performed += controller.Handler;
             controller.Action.canceled += controller.Handler;
@@ -48,7 +48,7 @@ public class Controller : MonoBehaviour
     
     private void OnDisable()
     {
-        foreach (var controller in listController)
+        foreach (var controller in _inputs)
         {
             controller.Action.performed += controller.Handler;
             controller.Action.canceled += controller.Handler;
@@ -79,13 +79,13 @@ public class Controller : MonoBehaviour
     {
         if (context.performed)
         {
-            onCastBaseSpellButtonPressed?.Invoke();
+            OnCastBaseSpellButtonPressed?.Invoke();
         }
     }
 
     private void Movement(InputAction.CallbackContext context)
     {
-        _moveDirection = context.ReadValue<Vector2>();
+        _move = context.ReadValue<Vector2>();
        
     }
 
@@ -93,11 +93,11 @@ public class Controller : MonoBehaviour
     {
         if (context.performed)
         {
-            _isUseIntarection = true;
+            _isUseInteraction = true;
         }
         else if (context.canceled)
         {
-            _isUseIntarection = false;
+            _isUseInteraction = false;
         }
     }
 
@@ -113,13 +113,13 @@ public class Controller : MonoBehaviour
 
     public bool GetInteractionUseHandler()
     {
-        return _isUseIntarection;
+        return _isUseInteraction;
     }
 
     private void LateUpdate()
     {
-        _isUseIntarection = false;
+        _isUseInteraction = false;
     }
 
-    public Vector2 GetDirection() => _moveDirection;
+    public Vector2 GetDirection() => _move;
 }

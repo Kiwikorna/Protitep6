@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyPathFinding : MonoBehaviour
+public class PathFinding : MonoBehaviour
 {
-    [SerializeField] private Transform playerPosition;
+    [SerializeField] private Transform player;
     private NavMeshAgent _agent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,12 +16,12 @@ public class EnemyPathFinding : MonoBehaviour
     {
         if (_agent.enabled == true)
         {
-            _agent.SetDestination(playerPosition.position);
+            _agent.SetDestination(player.position);
            
         }
         
     }
-    public NavMeshAgent GetNavMeshAgent() => _agent;
+    public NavMeshAgent GetAgent() => _agent;
     
     
 }

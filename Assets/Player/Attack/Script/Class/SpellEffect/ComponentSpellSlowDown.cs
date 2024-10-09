@@ -7,7 +7,7 @@ public class ComponentSpellSlowDown : MonoBehaviour
 {
      private float _slowDown;
      private float _timeSlowDown;
-    private EnemyPathFinding _enemyPathFinding;
+    private PathFinding _pathFinding;
     private SlowDownEffect _slowDownEffect;
     private void OnTriggerEnter(Collider other)
     {
@@ -15,7 +15,7 @@ public class ComponentSpellSlowDown : MonoBehaviour
 
         if (spellProjectile != null)
         {
-             _enemyPathFinding = GetComponent<EnemyPathFinding>();
+             _pathFinding = GetComponent<PathFinding>();
              _slowDown = 3;
              _timeSlowDown = 1;
              _slowDownEffect = new SlowDownEffect(_slowDown,_timeSlowDown);
@@ -28,9 +28,9 @@ public class ComponentSpellSlowDown : MonoBehaviour
 
     private IEnumerator TimeSlowDown()
     {
-        _enemyPathFinding.GetNavMeshAgent().speed -= _slowDownEffect.SlowDown;
+        _pathFinding.GetAgent().speed -= _slowDownEffect.SlowDown;
         yield return new WaitForSeconds(_slowDownEffect.TimeSlowDown);
-        _enemyPathFinding.GetNavMeshAgent().speed += _slowDownEffect.SlowDown;
+        _pathFinding.GetAgent().speed += _slowDownEffect.SlowDown;
     }
 
     public float GetTimeSlowDownDelete() => _timeSlowDown + 2f;

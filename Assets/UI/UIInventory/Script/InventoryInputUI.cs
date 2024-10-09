@@ -4,20 +4,26 @@ using UnityEngine.InputSystem;
 
 public class InventoryInputUI : MonoBehaviour
 {
-    private Action onInventoryAnyInputButton;
-    public Action<int> onInventoryButten;
-    private InputSystem_Actions _uiController;
+    private Action _onInventoryInputAnyInputButton;
+    public Action<int> OnInventoryInputButton;
+    private InputSystem_Actions _uiInventoryInput;
+
+    private void OnEnable()
+    {
+        _uiInventoryInput.UI.InputMainUI.Enable();
+    }
 
     private void Awake()
     {
-        _uiController = new InputSystem_Actions();
-        _uiController.UI.InputMainUI.performed += InventoryMainBar;
-        _uiController.UI.InputMainUI.Enable();
+        _uiInventoryInput = new InputSystem_Actions();
+        _uiInventoryInput.UI.InputMainUI.performed += InventoryMainBar;
+       
     }
     
     private void OnDisable()
     {
-        _uiController.UI.InputMainUI.canceled -= InventoryMainBar;
+        _uiInventoryInput.UI.InputMainUI.canceled -= InventoryMainBar;
+        _uiInventoryInput.UI.InputMainUI.Disable();
     }
 
     private void InventoryMainBar(InputAction.CallbackContext context)
@@ -25,13 +31,13 @@ public class InventoryInputUI : MonoBehaviour
         if (context.performed)
         {
             // Получаем введенную строку (например, на цифровой клавиатуре)
-            string inputString = context.control.name;
+            string input = context.control.name;
 
             // Преобразуем строку в число
-            if (int.TryParse(inputString, out int number) && number is > 0 and < 8)
+            if (int.TryParse(input, out int numberchoicebutton) && numberchoicebutton is > 0 and < 8)
             {
-                onInventoryAnyInputButton?.Invoke(); // Передаем номер слота
-                onInventoryButten?.Invoke(number - 1);
+                _onInventoryInputAnyInputButton?.Invoke(); // Передаем номер слота
+                OnInventoryInputButton?.Invoke(numberchoicebutton - 1);
             }
         }
     }

@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
-public class TakeDamageEnemy : MonoBehaviour
+public class Damage : MonoBehaviour
 {
-   [SerializeField] private EnemyPathFinding enemyPathFinding;
+   [SerializeField] private PathFinding pathFinding;
    private EnemyHealth _enemyHealth;
    [SerializeField] private int health;
 
@@ -21,16 +22,16 @@ public class TakeDamageEnemy : MonoBehaviour
       if (_enemyHealth.Health <= 0)
       {
          _enemyHealth.Health = 0;
-         StartCoroutine(DieEnemy());
+         StartCoroutine(EnemyDie());
 
       }
    }
 
-   private IEnumerator DieEnemy()
+   private IEnumerator EnemyDie()
    {
-      if (enemyPathFinding.GetNavMeshAgent() != null)
+      if (pathFinding.GetAgent() != null)
       {
-         enemyPathFinding.GetNavMeshAgent().enabled = false;
+         pathFinding.GetAgent().enabled = false;
       }
 
       transform.Rotate(0, 0, 75);

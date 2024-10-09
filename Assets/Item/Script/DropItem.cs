@@ -9,19 +9,19 @@ public class DropItem : MonoBehaviour
     [SerializeField] private InventoryManager inventoryInputUI;
     [SerializeField] private LayerMask dropItemLayer;
     [SerializeField] private float customDropDistance;
-    [SerializeField] private Controller buttonRemove;
+    [SerializeField] private PlayerInput buttonRemove;
 
     private void Awake()
     {
-        buttonRemove.OnDropItemButtonPressed += InputRemoveItem;
+        buttonRemove.OnDropItemButtonPressed += InputRemovedItem;
     }
 
     private void OnDisable()
     {
-        buttonRemove.OnDropItemButtonPressed -= InputRemoveItem;
+        buttonRemove.OnDropItemButtonPressed -= InputRemovedItem;
     }
 
-    private void InputRemoveItem()
+    private void InputRemovedItem()
     {
         RemoveItem();
     }
@@ -50,9 +50,9 @@ public class DropItem : MonoBehaviour
         InventoryItem slotInItem = GetItemInSlot();
        
 
-        var item = slotInItem.GetItemObject();
+        var item = slotInItem.GetItem();
         bool isNeedSpawnUnderPlayer = !IsHaveEmptySpaceInForwardDirection();
-        ShrinkingObjects();
+        DicriminationAndRemoveItem();
 
         if (isNeedSpawnUnderPlayer)
         {
@@ -67,8 +67,8 @@ public class DropItem : MonoBehaviour
         
         return true;
     }
-
-    public void SpawnDropItem(ItemObject item, Vector3? dropPosition = null)
+    
+    public void SpawnDropItem(Item item, Vector3? dropPosition = null)
     {
         Vector3 drop = dropPosition ?? GetDropPosition(); 
         Instantiate(item.prefab, drop, Quaternion.identity);
@@ -79,7 +79,6 @@ public class DropItem : MonoBehaviour
         float dropDistance = 1f;
         bool canDrop = !Physics.Raycast(transform.position, transform.forward, dropDistance * customDropDistance,
             dropItemLayer);
-        Debug.Log(canDrop);
         return canDrop;
     }
 
@@ -95,11 +94,11 @@ public class DropItem : MonoBehaviour
         return slotInItem;
     }
 
-    private void ShrinkingObjects()
+    private void DicriminationAndRemoveItem()
     {
         InventoryItem slotInItem = GetItemInSlot();
-        slotInItem.count--;
-        if (slotInItem.count <= 0)
+        slotInItem.DicriminationItemCount();
+        if (slotInItem.GetItemCount() <= 0)
             Destroy(slotInItem.gameObject);
         else
             slotInItem.RefreshCount();

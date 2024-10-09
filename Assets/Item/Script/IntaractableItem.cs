@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class IntaractableItem : MonoBehaviour, Interactable
 {
-    [SerializeField] private ItemObject item;
+    [SerializeField] private Item item;
     public void Intarection()
     {
-        if (Controller.Instance.GetInteractionHandler())
+        if (PlayerInput.Instance.GetInteractionHandler())
         {
             InventoryManager.Instance.AddItem(item);
             Destroy(gameObject);

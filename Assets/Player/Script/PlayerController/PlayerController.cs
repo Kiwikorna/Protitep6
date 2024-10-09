@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandlePlayer()
     {
-        _move = Controller.Instance.GetDirection();
+        _move = PlayerInput.Instance.GetDirection();
         if (_move == Vector2.zero) return;
 
         Vector3 moveDir = new Vector3(_move.x, 0f, _move.y); // Нормализация направления движения

@@ -12,9 +12,9 @@ public class CharacterHealth : MonoBehaviour
       inventoryUsing.OnItemUsed += TryUsedItem;
    }
 
-   private void TryUsedItem(ItemObject itemObject)
+   private void TryUsedItem(Item item)
    {
-      if (itemObject is IHealthFlask healthObject)
+      if (item is IHealthFlask healthObject)
       {
         healthSO.health += healthObject.HealthValue;
       }
