@@ -9,6 +9,6 @@ public class UIPlayerMana : MonoBehaviour
 
     private void Update()
     {
-        text.text = "Mana: " + player.manaCharacter.ToString();
+        text.text = "Mana: " + player.manaCharacterValue.ToString();
     }
 }

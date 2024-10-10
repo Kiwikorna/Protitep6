@@ -9,6 +9,6 @@ public class UIPlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = "HP: " + player.health.ToString();
+        healthText.text = "HP: " + player.healthValue.ToString();
     }
 }

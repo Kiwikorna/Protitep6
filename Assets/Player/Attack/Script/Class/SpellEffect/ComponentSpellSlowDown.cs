@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class ComponentSpellSlowDown : MonoBehaviour
 {
-     private float _slowDown;
-     private float _timeSlowDown;
+     private float _slowDownValue;
+     private float _timeSlowDownValue;
     private PathFinding _pathFinding;
     private SlowDownEffect _slowDownEffect;
+    private const float DeleteSpellSlowDownEffect = 3.0f;
     private void OnTriggerEnter(Collider other)
     {
         BaseSpellProjectile spellProjectile = other.GetComponent<BaseSpellProjectile>();
@@ -16,9 +17,9 @@ public class ComponentSpellSlowDown : MonoBehaviour
         if (spellProjectile != null)
         {
              _pathFinding = GetComponent<PathFinding>();
-             _slowDown = 3;
-             _timeSlowDown = 1;
-             _slowDownEffect = new SlowDownEffect(_slowDown,_timeSlowDown);
+             _slowDownValue = 3;
+             _timeSlowDownValue = 1;
+             _slowDownEffect = new SlowDownEffect(_slowDownValue,_timeSlowDownValue);
 
             
             StartCoroutine(TimeSlowDown());
@@ -28,10 +29,10 @@ public class ComponentSpellSlowDown : MonoBehaviour
 
     private IEnumerator TimeSlowDown()
     {
-        _pathFinding.GetAgent().speed -= _slowDownEffect.SlowDown;
-        yield return new WaitForSeconds(_slowDownEffect.TimeSlowDown);
-        _pathFinding.GetAgent().speed += _slowDownEffect.SlowDown;
+        _pathFinding.GetAgent().speed -= _slowDownEffect.SlowDownValue;
+        yield return new WaitForSeconds(_slowDownEffect.TimeSlowDownValue);
+        _pathFinding.GetAgent().speed += _slowDownEffect.SlowDownValue;
     }
 
-    public float GetTimeSlowDownDelete() => _timeSlowDown + 2f;
+    public float GetTimeSlowDownDelete() => _timeSlowDownValue + DeleteSpellSlowDownEffect;
 }

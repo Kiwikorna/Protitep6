@@ -10,7 +10,7 @@ public class InteractionSystem : MonoBehaviour
         
             if (interable != null)
             {
-                interable.Intarection();
+                interable.Interaction();
                 
             }
 

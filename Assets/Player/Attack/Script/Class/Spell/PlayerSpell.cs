@@ -24,7 +24,7 @@ public class SpellCaster : MonoBehaviour
    {
       
       
-      if (playerMana.manaCharacter > _baseSpellProjectile.SpellManaCost)
+      if (playerMana.manaCharacterValue > _baseSpellProjectile.SpellManaCost)
       {
          if (!_isCastingSpell)
          {
@@ -40,7 +40,7 @@ public class SpellCaster : MonoBehaviour
       var spell = Instantiate(_baseSpellProjectile.GetSpellPrefab(), spellSpawnPoint.position, spellSpawnPoint.rotation);
       
       spell.GetComponent<Rigidbody>().linearVelocity = spellSpawnPoint.forward * _baseSpellProjectile.SpellSpeed;
-      playerMana.manaCharacter -= _baseSpellProjectile.SpellManaCost;
+      playerMana.manaCharacterValue -= _baseSpellProjectile.SpellManaCost;
       _isCastingSpell = false;
    }
    

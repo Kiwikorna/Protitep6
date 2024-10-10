@@ -2,6 +2,6 @@ using UnityEngine;
 
 public interface Interactable
 {
-    public void Intarection();
+    public void Interaction();
     public Transform GetTransform();
 }

@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class AnimationPlayer : MonoBehaviour
 {
-    private Animator _anim;
+    private Animator _animation;
 
     [SerializeField] private PlayerController controller;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
-        _anim = GetComponent<Animator>();
+        _animation = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        _anim.SetBool("IsRun",controller.GetIsRun());
+        _animation.SetBool("IsRun",controller.IsRun());
     }
 }

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class InventoryUsing : MonoBehaviour
+public class SlotUsing : MonoBehaviour
 {
     public event Action OnAnyItemUsed;
     public event Action<Item> OnItemUsed; 

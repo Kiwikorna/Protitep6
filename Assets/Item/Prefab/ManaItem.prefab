@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4405071000308109269}
   - component: {fileID: 3283091768214696944}
   m_Layer: 6
-  m_Name: ManaFlask
+  m_Name: ManaItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

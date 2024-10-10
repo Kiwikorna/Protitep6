@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SlowDownEffect 
 {
-    public float SlowDown { get; set; }
-    public float TimeSlowDown { get; set; }
+    public float SlowDownValue { get; private set; }
+    public float TimeSlowDownValue { get; private set; }
 
-    public SlowDownEffect(float slowDown, float timeSlowDown)
+    public SlowDownEffect(float slowDownValue, float timeSlowDownValue)
     {
-        SlowDown = slowDown;
-        TimeSlowDown = timeSlowDown;
+        SlowDownValue = slowDownValue;
+        TimeSlowDownValue = timeSlowDownValue;
     }
     
 }

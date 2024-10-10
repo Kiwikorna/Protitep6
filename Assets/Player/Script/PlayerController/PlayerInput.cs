@@ -2,14 +2,13 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
     public static PlayerInput Instance { get; private set; }
     private Vector2 _move = Vector2.zero;
     private InputSystem_Actions _inputSystemActions;
-    private List<ActionClassController> _inputs;
+    private List<ActionInput> _inputs;
     private bool _isInteractedHandler = false;
     public event Action OnDropItemButtonPressed ;
     public event Action OnCastBaseSpellButtonPressed;
@@ -20,20 +19,20 @@ public class PlayerInput : MonoBehaviour
     private void Awake()
     {
         _inputSystemActions = new InputSystem_Actions();
-        _inputs = new List<ActionClassController>
+        _inputs = new List<ActionInput>
         {
             new (_inputSystemActions.Player.Move, Movement),
             new (_inputSystemActions.Player.Interact,InteractHandler),
-            new (_inputSystemActions.Player.DropItemInventory,InteractionDropItemHandler),
-            new(_inputSystemActions.Player.UseItem,UseInteractionItem),
-            new(_inputSystemActions.Player.CastBaseSpell,CastBaseSpellButton)
+            new (_inputSystemActions.Player.DropItemInventory,DropItemHandler),
+            new(_inputSystemActions.Player.UseItem,InteractionItemHandler),
+            new(_inputSystemActions.Player.CastBaseSpell,CastSpellButton)
            
         };
 
         foreach (var controller in _inputs)
         {
-            controller.Action.performed += controller.Handler;
-            controller.Action.canceled += controller.Handler;
+            controller.Action.performed += controller.HandlerAction;
+            controller.Action.canceled += controller.HandlerAction;
         }
         
         _inputSystemActions.Enable();
@@ -50,8 +49,8 @@ public class PlayerInput : MonoBehaviour
     {
         foreach (var controller in _inputs)
         {
-            controller.Action.performed += controller.Handler;
-            controller.Action.canceled += controller.Handler;
+            controller.Action.performed += controller.HandlerAction;
+            controller.Action.canceled += controller.HandlerAction;
         }
         _inputSystemActions.Disable();
     }
@@ -67,7 +66,7 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    private void InteractionDropItemHandler(InputAction.CallbackContext context)
+    private void DropItemHandler(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
@@ -75,7 +74,7 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    private void CastBaseSpellButton(InputAction.CallbackContext context)
+    private void CastSpellButton(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
@@ -89,7 +88,7 @@ public class PlayerInput : MonoBehaviour
        
     }
 
-    private void UseInteractionItem(InputAction.CallbackContext context)
+    private void InteractionItemHandler(InputAction.CallbackContext context)
     {
         if (context.performed)
         {

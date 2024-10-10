@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "ScriptableObject/Item/HealthItem",fileName = "HealthObject")]
-public class Health : Item,IHealthFlask
+public class HealthItem : Item,IHealthFlask
 {
    public int healthFlask;
    

@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         isRun = _body.linearVelocity != Vector3.zero;
     }
 
-    public bool GetIsRun() => isRun;
+    public bool IsRun() => isRun;
 
     
 }

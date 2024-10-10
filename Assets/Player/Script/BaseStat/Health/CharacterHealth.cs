@@ -4,19 +4,19 @@ using UnityEngine.Serialization;
 
 public class CharacterHealth : MonoBehaviour
 {
-   [SerializeField] private InventoryUsing inventoryUsing;
-   [SerializeField] private CharacterHealthSO healthSO;
+    [SerializeField] private SlotUsing slotUsing;
+   [SerializeField] private CharacterHealthSO healthValueSo;
 
    private void Awake()
    {
-      inventoryUsing.OnItemUsed += TryUsedItem;
+      slotUsing.OnItemUsed += TryUsedItem;
    }
 
    private void TryUsedItem(Item item)
    {
-      if (item is IHealthFlask healthObject)
+      if (item is IHealthFlask health)
       {
-        healthSO.health += healthObject.HealthValue;
+        healthValueSo.healthValue += health.HealthValue;
       }
    }
 }

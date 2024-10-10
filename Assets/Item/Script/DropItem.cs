@@ -1,12 +1,13 @@
 
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class DropItem : MonoBehaviour
 {
     [SerializeField] private Transform player;
     [SerializeField] private float distance = 4f;
-    [SerializeField] private InventoryManager inventoryInputUI;
+    [SerializeField] private InventoryManager InputSlotUI;
     [SerializeField] private LayerMask dropItemLayer;
     [SerializeField] private float customDropDistance;
     [SerializeField] private PlayerInput buttonRemove;
@@ -28,8 +29,8 @@ public class DropItem : MonoBehaviour
     
     public bool TryRemoveItem()
     {
-        if (inventoryInputUI.GetSelectSlot() < 0 ||
-            inventoryInputUI.GetSelectSlot() >= inventoryInputUI.GetSlotUI().Length)
+        if (InputSlotUI.GetSelectSlot() < 0 ||
+            InputSlotUI.GetSelectSlot() >= InputSlotUI.GetSlotUI().Length)
             return false;
         
         InventoryItem slotInItem = GetItemInSlot();
@@ -56,7 +57,7 @@ public class DropItem : MonoBehaviour
 
         if (isNeedSpawnUnderPlayer)
         {
-            var dropPosition = player.transform.position; // Прямо на позиции игрока
+            var dropPosition = player.position; // Прямо на позиции игрока
             SpawnDropItem(item, dropPosition);
             
         }
@@ -89,7 +90,7 @@ public class DropItem : MonoBehaviour
 
     public InventoryItem GetItemInSlot()
     {
-        InventorySlot selectedSlot = inventoryInputUI.GetSlotUI()[inventoryInputUI.GetSelectSlot()];
+        InventorySlot selectedSlot = InputSlotUI.GetSlotUI()[InputSlotUI.GetSelectSlot()];
         InventoryItem slotInItem = selectedSlot.GetComponentInChildren<InventoryItem>();
         return slotInItem;
     }
