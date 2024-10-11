@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class InventoryItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    private Item _item;
+    private ItemInInventory _itemInInventory;
     private Transform _afterDragTransform;
     private Image _imageItem; 
     [SerializeField] private TextMeshProUGUI textCount;
@@ -37,10 +37,11 @@ public class InventoryItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (!_item.isLocked)
+        if (_itemInInventory.isLocked)
         {
             this.transform.position = Input.mousePosition;
         }
+       
     }
 
 
@@ -50,17 +51,17 @@ public class InventoryItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
         _imageItem.raycastTarget = true;
     }
 
-    public void ImageIntializedAndRefreshItem(Item item)
+    public void ImageIntializedAndRefreshItem(ItemInInventory itemInInventory)
     {
-         _item = item;
-        _imageItem.sprite = _item.sprite;
+         _itemInInventory = itemInInventory;
+        _imageItem.sprite = _itemInInventory.sprite;
         RefreshCount();
     }
     
     public void SetAfterDragTransform(Transform trans) => _afterDragTransform = trans;
     public Transform GetAfterDrag() => _afterDragTransform;
 
-    public Item GetItem() => _item;
+    public ItemInInventory GetItem() => _itemInInventory;
     public int DicriminationItemCount() => _itemCount--;
     public int GetItemCount() => _itemCount;
 

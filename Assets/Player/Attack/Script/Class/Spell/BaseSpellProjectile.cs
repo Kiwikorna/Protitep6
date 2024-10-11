@@ -2,14 +2,14 @@ using UnityEngine;
 
 public abstract class BaseSpellProjectile : MonoBehaviour
 {
-    [SerializeField]private GameObject spellPrefab;
-   [field:SerializeField] public float SpellDamage { get; private set; }
-   [field:SerializeField] public float SpellManaCost { get; private set; }
-   [field:SerializeField] public float SpellRange { get; private set; }
-   [field:SerializeField] public float SpellSpeed { get; private set; }
+    [SerializeField]private GameObject prefab;
+   [field:SerializeField] public float Damage { get; private set; }
+   [field:SerializeField] public float ManaCost { get; private set; }
+   [field:SerializeField] public float Range { get; private set; }
+   [field:SerializeField] public float Speed { get; private set; }
    
     public abstract void SpellProjectileFly();
-    public  GameObject GetSpellPrefab() => spellPrefab;
+    public  GameObject GetSpellPrefab() => prefab;
 
    
 }

@@ -1,13 +1,14 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class IntaractableItem : MonoBehaviour, Interactable
 {
-    [SerializeField] private Item item;
+    [SerializeField] private ItemInInventory itemInInventory;
     public void Interaction()
     {
-        if (PlayerInput.Instance.GetInteractionHandler())
+        if (ControllerPlayer.Instance.GetInteractionHandler())
         {
-            InventoryManager.Instance.AddItem(item);
+            InventoryManager.Instance.AddItem(itemInInventory);
             Destroy(gameObject);
         }
         

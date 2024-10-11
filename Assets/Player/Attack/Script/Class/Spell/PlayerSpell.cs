@@ -17,14 +17,14 @@ public class SpellCaster : MonoBehaviour
 
    private void Start()
    {
-      PlayerInput.Instance.OnCastBaseSpellButtonPressed += SpellCast;
+      ControllerPlayer.Instance.OnCastBaseSpellButtonPressed += SpellCast;
       
    }
    private void SpellCast()
    {
       
       
-      if (playerMana.manaCharacterValue > _baseSpellProjectile.SpellManaCost)
+      if (playerMana.manaCharacterValue > _baseSpellProjectile.ManaCost)
       {
          if (!_isCastingSpell)
          {
@@ -39,8 +39,8 @@ public class SpellCaster : MonoBehaviour
       yield return new WaitForSeconds(spellDelayPressButton);
       var spell = Instantiate(_baseSpellProjectile.GetSpellPrefab(), spellSpawnPoint.position, spellSpawnPoint.rotation);
       
-      spell.GetComponent<Rigidbody>().linearVelocity = spellSpawnPoint.forward * _baseSpellProjectile.SpellSpeed;
-      playerMana.manaCharacterValue -= _baseSpellProjectile.SpellManaCost;
+      spell.GetComponent<Rigidbody>().linearVelocity = spellSpawnPoint.forward * _baseSpellProjectile.Speed;
+      playerMana.manaCharacterValue -= _baseSpellProjectile.ManaCost;
       _isCastingSpell = false;
    }
    

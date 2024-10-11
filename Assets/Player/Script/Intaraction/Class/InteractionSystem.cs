@@ -6,11 +6,11 @@ public class InteractionSystem : MonoBehaviour
   
     private void Update()
     {
-        Interactable interable = GetInteractionObject();
+        Interactable interactable = GetInteractionObject();
         
-            if (interable != null)
+            if (interactable != null)
             {
-                interable.Interaction();
+                interactable.Interaction();
                 
             }
 
@@ -19,39 +19,39 @@ public class InteractionSystem : MonoBehaviour
 
     private Interactable GetInteractionObject()
     {
-        List<Interactable> listInteraction = new List<Interactable>();
+        List<Interactable> interactions = new List<Interactable>();
 
-        float interactionDistance = 2f;
+        float distance = 2f;
 
-        Collider[] colliders = Physics.OverlapSphere(transform.position, interactionDistance);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, distance);
 
         foreach (Collider collider in colliders)
         {
             if (collider.TryGetComponent(out Interactable interaction))
             {
-                listInteraction.Add(interaction);
+                interactions.Add(interaction);
             }
         }
 
-        Interactable clouseInteraction = null;
+        Interactable interacthionClose = null;
 
-        foreach (Interactable interaction in listInteraction)
+        foreach (Interactable interaction in interactions)
         {
-            if (clouseInteraction == null)
+            if (interacthionClose == null)
             {
-                clouseInteraction = interaction;
+                interacthionClose = interaction;
             }
             else
             {
                 if (Vector3.Distance(transform.position, interaction.GetTransform().position) <
-                    Vector3.Distance(transform.position, clouseInteraction.GetTransform().position))
+                    Vector3.Distance(transform.position, interacthionClose.GetTransform().position))
                 {
-                    clouseInteraction = interaction;
+                    interacthionClose = interaction;
                 }
             }
                 
         }
 
-        return clouseInteraction;
+        return interacthionClose;
     }
 }

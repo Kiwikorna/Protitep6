@@ -4,7 +4,7 @@ public class AnimationPlayer : MonoBehaviour
 {
     private Animator _animation;
 
-    [SerializeField] private PlayerController controller;
+    [SerializeField] private PlayerMovements controller;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {

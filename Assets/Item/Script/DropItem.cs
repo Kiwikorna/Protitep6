@@ -7,10 +7,10 @@ public class DropItem : MonoBehaviour
 {
     [SerializeField] private Transform player;
     [SerializeField] private float distance = 4f;
-    [SerializeField] private InventoryManager InputSlotUI;
+    [SerializeField] private InventoryManager ControllerSlotUI;
     [SerializeField] private LayerMask dropItemLayer;
     [SerializeField] private float customDropDistance;
-    [SerializeField] private PlayerInput buttonRemove;
+    [SerializeField] private ControllerPlayer buttonRemove;
 
     private void Awake()
     {
@@ -29,8 +29,8 @@ public class DropItem : MonoBehaviour
     
     public bool TryRemoveItem()
     {
-        if (InputSlotUI.GetSelectSlot() < 0 ||
-            InputSlotUI.GetSelectSlot() >= InputSlotUI.GetSlotUI().Length)
+        if (ControllerSlotUI.GetSelectSlot() < 0 ||
+            ControllerSlotUI.GetSelectSlot() >= ControllerSlotUI.GetSlotUI().Length)
             return false;
         
         InventoryItem slotInItem = GetItemInSlot();
@@ -69,10 +69,10 @@ public class DropItem : MonoBehaviour
         return true;
     }
     
-    public void SpawnDropItem(Item item, Vector3? dropPosition = null)
+    public void SpawnDropItem(ItemInInventory itemInInventory, Vector3? dropPosition = null)
     {
         Vector3 drop = dropPosition ?? GetDropPosition(); 
-        Instantiate(item.prefab, drop, Quaternion.identity);
+        Instantiate(itemInInventory.prefab, drop, Quaternion.identity);
     }
 
     public bool IsHaveEmptySpaceInForwardDirection()
@@ -90,7 +90,7 @@ public class DropItem : MonoBehaviour
 
     public InventoryItem GetItemInSlot()
     {
-        InventorySlot selectedSlot = InputSlotUI.GetSlotUI()[InputSlotUI.GetSelectSlot()];
+        InventorySlot selectedSlot = ControllerSlotUI.GetSlotUI()[ControllerSlotUI.GetSelectSlot()];
         InventoryItem slotInItem = selectedSlot.GetComponentInChildren<InventoryItem>();
         return slotInItem;
     }

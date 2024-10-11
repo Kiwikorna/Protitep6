@@ -2,15 +2,14 @@ using System;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "ScriptableObject/Item/HealthItem",fileName = "HealthObject")]
-public class HealthItem : Item,IHealthFlask
+public class HealthItemInInventory : ItemInInventory,IHealthFlask
 {
-   public int healthFlask;
+   public int healthValue;
    
-
 
    public float HealthValue
    {
-      get => healthFlask;
-      set => value = healthFlask;
+      get => healthValue;
+      set => value = healthValue;
    }
 }

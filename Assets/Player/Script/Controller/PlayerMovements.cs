@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovements : MonoBehaviour
 {
     private Vector2 _move;
     private Rigidbody _body;
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandlePlayer()
     {
-        _move = PlayerInput.Instance.GetDirection();
+        _move = ControllerPlayer.Instance.GetDirection();
         if (_move == Vector2.zero) return;
 
         Vector3 moveDir = new Vector3(_move.x, 0f, _move.y); // Нормализация направления движения

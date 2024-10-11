@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class HundleCamera : MonoBehaviour
+public class PlayerCamera : MonoBehaviour
 {
-    [SerializeField] private Transform playertarget;
-    [SerializeField] private float smoothCamera = 5.0f;
+    [SerializeField] private Transform target;
+    [SerializeField] private float smooth = 5.0f;
     [SerializeField] private Vector3 offset;
     private Vector3 _targetPosition;
     private Vector3 _velocityCamera = Vector3.zero;
@@ -20,7 +20,7 @@ public class HundleCamera : MonoBehaviour
 
     public void MoveCamera()
     {
-        _targetPosition = playertarget.position + offset;
-        transform.position = Vector3.SmoothDamp(transform.position, _targetPosition, ref _velocityCamera, smoothCamera);
+        _targetPosition = target.position + offset;
+        transform.position = Vector3.SmoothDamp(transform.position, _targetPosition, ref _velocityCamera, smooth);
     }
 }

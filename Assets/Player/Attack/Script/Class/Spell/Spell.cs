@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "ScriptableObject/Item/Spell/spellObject",fileName = "spellObject")]
-public class Spell : Item
+public class Spell : ItemInInventory
 {
     public BaseSpellProjectile spellProjectile;
 }

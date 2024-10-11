@@ -9,7 +9,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     
    
     [SerializeField] private bool isLocked;
-    private Item _item;
+    private ItemInInventory _itemInInventory;
     public void Select()
     {
         image.color = selectedSlot;
@@ -52,17 +52,17 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     }
     
     // Резервируем слот для определенного предмета
-    public void ReserveForItem(Item item)
+    public void ReserveForItem(ItemInInventory itemInInventory)
     {
-        _item = item;
+        _itemInInventory = itemInInventory;
     }
 
     // Проверяем, зарезервирован ли слот для другого предмета
-    public bool IsReservedForOtherItem(Item item)
+    public bool IsReservedForOtherItem(ItemInInventory itemInInventory)
     {
-        return _item != null && _item != item;
+        return   _itemInInventory != itemInInventory;
     }
 
     // Проверка, зарезервирован ли слот
-    public bool IsReserved() => _item != null;
+    public bool IsReserved() => _itemInInventory != null;
 }

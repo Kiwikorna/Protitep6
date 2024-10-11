@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerInput : MonoBehaviour
+public class ControllerPlayer : MonoBehaviour
 {
-    public static PlayerInput Instance { get; private set; }
+    public static ControllerPlayer Instance { get; private set; }
     private Vector2 _move = Vector2.zero;
     private InputSystem_Actions _inputSystemActions;
-    private List<ActionInput> _inputs;
+    private List<ActionInputs> _inputs;
     private bool _isInteractedHandler = false;
     public event Action OnDropItemButtonPressed ;
     public event Action OnCastBaseSpellButtonPressed;
-    private bool _isUseInteraction = false;
+    private bool _isUseItemWithInventory = false;
     
 
 
     private void Awake()
     {
         _inputSystemActions = new InputSystem_Actions();
-        _inputs = new List<ActionInput>
+        _inputs = new List<ActionInputs>
         {
             new (_inputSystemActions.Player.Move, Movement),
             new (_inputSystemActions.Player.Interact,InteractHandler),
@@ -31,8 +31,8 @@ public class PlayerInput : MonoBehaviour
 
         foreach (var controller in _inputs)
         {
-            controller.Action.performed += controller.HandlerAction;
-            controller.Action.canceled += controller.HandlerAction;
+            controller.inputAction.performed += controller.HandlerAction;
+            controller.inputAction.canceled += controller.HandlerAction;
         }
         
         _inputSystemActions.Enable();
@@ -49,8 +49,8 @@ public class PlayerInput : MonoBehaviour
     {
         foreach (var controller in _inputs)
         {
-            controller.Action.performed += controller.HandlerAction;
-            controller.Action.canceled += controller.HandlerAction;
+            controller.inputAction.performed += controller.HandlerAction;
+            controller.inputAction.canceled += controller.HandlerAction;
         }
         _inputSystemActions.Disable();
     }
@@ -92,11 +92,11 @@ public class PlayerInput : MonoBehaviour
     {
         if (context.performed)
         {
-            _isUseInteraction = true;
+            _isUseItemWithInventory = true;
         }
         else if (context.canceled)
         {
-            _isUseInteraction = false;
+            _isUseItemWithInventory = false;
         }
     }
 
@@ -110,14 +110,14 @@ public class PlayerInput : MonoBehaviour
 
 
 
-    public bool GetInteractionUseHandler()
+    public bool GetInteractionUseItemWithInventoryHandler()
     {
-        return _isUseInteraction;
+        return _isUseItemWithInventory;
     }
 
     private void LateUpdate()
     {
-        _isUseInteraction = false;
+        _isUseItemWithInventory = false;
     }
 
     public Vector2 GetDirection() => _move;

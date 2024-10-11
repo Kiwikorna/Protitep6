@@ -4,7 +4,7 @@ using UnityEngine;
 public class SlotUsing : MonoBehaviour
 {
     public event Action OnAnyItemUsed;
-    public event Action<Item> OnItemUsed; 
+    public event Action<ItemInInventory> OnItemUsed; 
 
     private void Update()
     {
@@ -13,7 +13,7 @@ public class SlotUsing : MonoBehaviour
 
     private void CheckItemUsing()
     {
-        if (PlayerInput.Instance.GetInteractionUseHandler())
+        if (ControllerPlayer.Instance.GetInteractionUseItemWithInventoryHandler())
         {
             var itemObject = InventoryManager.Instance.GetSelectedSlot(true);
             if (itemObject != null)

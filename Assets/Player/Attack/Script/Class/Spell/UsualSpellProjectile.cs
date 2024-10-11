@@ -23,7 +23,7 @@ public  class UsualSpellProjectile : BaseSpellProjectile
     public override void SpellProjectileFly()
     {
         float distance = Vector3.Distance(transform.position, _startPosition);
-        if (distance >= SpellRange)
+        if (distance >= Range)
             Destroy(gameObject);
     }
 
@@ -36,7 +36,7 @@ public  class UsualSpellProjectile : BaseSpellProjectile
         
         if (enemy != null)
         {
-            enemy.TakeDamage(SpellDamage);
+            enemy.TakeDamage(Damage);
             
         }
         Destroy(gameObject);

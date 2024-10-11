@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 3682047494737980975, guid: 0a39c1fd82090ff428cc8d6b2b14f30d, type: 3}
   sprite: {fileID: 21300000, guid: f70e4de771a0df74190b8d10c523bf86, type: 3}
-  stackable: 1
-  item: 0
+  stackable: 0
   isLocked: 1
   manaItem: 35

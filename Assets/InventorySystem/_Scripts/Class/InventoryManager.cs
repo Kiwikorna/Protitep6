@@ -30,9 +30,9 @@ public class InventoryManager : MonoBehaviour
         inputSlotUI.OnInventoryInputButton += ChangeSelectedSlot;
         
         // Пример привязки HealthObject к слоту 0
-        ConsolidateItemToSlot(typeof(HealthItem), 0);
+        ConsolidateItemToSlot(typeof(HealthItemInInventory), 0);
         // Пример привязки другого предмета (например, WeaponObject) к слоту 1
-        ConsolidateItemToSlot(typeof(ManaItem), 1);
+        ConsolidateItemToSlot(typeof(ManaItemInInventory), 1);
     }
 
     private void OnDestroy()
@@ -59,10 +59,10 @@ public class InventoryManager : MonoBehaviour
     }
 
     // Проверка, есть ли у предмета привязанный слот
-    public bool TryGetAddConsolidateIteminSlot(Item item, out InventorySlot boundSlot)
+    public bool TryGetAddConsolidateIteminSlot(ItemInInventory itemInInventory, out InventorySlot boundSlot)
     {
         boundSlot = null;
-        if (_itemSlotConsolidate.TryGetValue(item.GetType(), out int slotIndex))
+        if (_itemSlotConsolidate.TryGetValue(itemInInventory.GetType(), out int slotIndex))
         {
             boundSlot = inventorySlots[slotIndex];
             return true;
@@ -70,10 +70,10 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    public bool AddItem(Item item)
+    public bool AddItem(ItemInInventory itemInInventory)
     {
         // Проверяем, есть ли у предмета привязанный слот
-        if (TryGetAddConsolidateIteminSlot(item, out InventorySlot reservedSlot))
+        if (TryGetAddConsolidateIteminSlot(itemInInventory, out InventorySlot reservedSlot))
         {
             // Если слот привязан, пытаемся добавить в него предмет
             InventoryItem itemInSlot = reservedSlot.GetComponentInChildren<InventoryItem>();
@@ -81,10 +81,10 @@ public class InventoryManager : MonoBehaviour
             if (itemInSlot == null)
             {
                 // Если слот пуст, добавляем новый предмет
-                SpawnNewItemFromInventory(item, reservedSlot);
+                SpawnNewItemFromInventory(itemInInventory, reservedSlot);
                 return true;
             }
-            else if (itemInSlot.GetItem() == item && itemInSlot.GetItemCount() < _maxSizeItemInSlot)
+            else if (itemInSlot.GetItem() == itemInInventory && itemInSlot.GetItemCount() < _maxSizeItemInSlot)
             {
                 // Если слот уже содержит этот предмет, увеличиваем количество
                 itemInSlot.IncriminationItemCount();
@@ -100,9 +100,9 @@ public class InventoryManager : MonoBehaviour
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
 
             // Проверяем, что слот пустой и не зарезервирован для других предметов
-            if (itemInSlot == null && !slot.IsReservedForOtherItem(item))
+            if (itemInSlot == null && !slot.IsReservedForOtherItem(itemInInventory))
             {
-                SpawnNewItemFromInventory(item, slot);
+                SpawnNewItemFromInventory(itemInInventory, slot);
                 return true;
             }
         }
@@ -110,7 +110,7 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    public Item GetSelectedSlot(bool use)
+    public ItemInInventory GetSelectedSlot(bool use)
     {
         if (_selectSlot < 0 || _selectSlot >=  inventorySlots.Length)
         {
@@ -123,14 +123,14 @@ public class InventoryManager : MonoBehaviour
 
         if (itemInSlot != null)
         {
-          Item item =  itemInSlot.GetItem();
+          ItemInInventory itemInInventory =  itemInSlot.GetItem();
 
             if (use == true)
             {
                 RefreshAndDestroyItemInSlot(itemInSlot);
                     
             }
-            return item;
+            return itemInInventory;
         }
 
         return null;
@@ -150,15 +150,15 @@ public class InventoryManager : MonoBehaviour
                     
         }
     }
-    public void SpawnNewItemFromInventory(Item item, InventorySlot slot)
+    public void SpawnNewItemFromInventory(ItemInInventory itemInInventory, InventorySlot slot)
     {
         GameObject createNewItemInitiate = Instantiate(inventoryItemPrefab, slot.transform);
 
         InventoryItem inventoryItem = createNewItemInitiate.GetComponent<InventoryItem>();
-        inventoryItem.ImageIntializedAndRefreshItem(item);
+        inventoryItem.ImageIntializedAndRefreshItem(itemInInventory);
 
         // Резервируем слот для этого предмета
-        slot.ReserveForItem(item);
+        slot.ReserveForItem(itemInInventory);
     }
     
     public InventorySlot[] GetSlotUI() => inventorySlots;
