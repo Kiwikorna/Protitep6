@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Resources;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -59,7 +60,7 @@ public class InventoryManager : MonoBehaviour
     }
 
     // Проверка, есть ли у предмета привязанный слот
-    public bool TryGetAddConsolidateIteminSlot(ItemInInventory itemInInventory, out InventorySlot boundSlot)
+    public bool TryGetAddConsolidateItemInSlot(ItemInInventory itemInInventory, out InventorySlot boundSlot)
     {
         boundSlot = null;
         if (_itemSlotConsolidate.TryGetValue(itemInInventory.GetType(), out int slotIndex))
@@ -73,7 +74,7 @@ public class InventoryManager : MonoBehaviour
     public bool AddItem(ItemInInventory itemInInventory)
     {
         // Проверяем, есть ли у предмета привязанный слот
-        if (TryGetAddConsolidateIteminSlot(itemInInventory, out InventorySlot reservedSlot))
+        if (TryGetAddConsolidateItemInSlot(itemInInventory, out InventorySlot reservedSlot))
         {
             // Если слот привязан, пытаемся добавить в него предмет
             InventoryItem itemInSlot = reservedSlot.GetComponentInChildren<InventoryItem>();
@@ -93,16 +94,17 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        // Если привязанный слот заполнен или его нет, ищем другой свободный слот
-        for (int i = 0; i < inventorySlots.Length; i++)
+         // Ищем другой свободный слот
+        for (int i = 2; i < inventorySlots.Length; i++)
         {
             InventorySlot slot = inventorySlots[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-
-            // Проверяем, что слот пустой и не зарезервирован для других предметов
-            if (itemInSlot == null && !slot.IsReservedForOtherItem(itemInInventory))
+            
+            // Если слот не зарезервирован и пустой, можем его использовать
+            if ( itemInSlot == null)
             {
                 SpawnNewItemFromInventory(itemInInventory, slot);
+                Debug.Log("Easy");
                 return true;
             }
         }
@@ -153,8 +155,8 @@ public class InventoryManager : MonoBehaviour
     public void SpawnNewItemFromInventory(ItemInInventory itemInInventory, InventorySlot slot)
     {
         GameObject createNewItemInitiate = Instantiate(inventoryItemPrefab, slot.transform);
-
         InventoryItem inventoryItem = createNewItemInitiate.GetComponent<InventoryItem>();
+        Debug.Log(inventoryItem._imageItem);
         inventoryItem.ImageIntializedAndRefreshItem(itemInInventory);
 
         // Резервируем слот для этого предмета

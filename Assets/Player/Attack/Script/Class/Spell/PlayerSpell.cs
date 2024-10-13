@@ -11,7 +11,7 @@ public class SpellCaster : MonoBehaviour
    [SerializeField] private CharacterManaSO playerMana;
    [SerializeField] private float spellDelayPressButton;
     private GameObject _spellPrefab;
-  private BaseSpellProjectile _baseSpellProjectile;
+  private BaseSpell _baseSpell;
 
    private bool _isCastingSpell = false;
 
@@ -24,7 +24,7 @@ public class SpellCaster : MonoBehaviour
    {
       
       
-      if (playerMana.manaCharacterValue > _baseSpellProjectile.ManaCost)
+      if (playerMana.manaCharacterValue > _baseSpell.ManaCost)
       {
          if (!_isCastingSpell)
          {
@@ -37,10 +37,10 @@ public class SpellCaster : MonoBehaviour
    {
       _isCastingSpell = true;
       yield return new WaitForSeconds(spellDelayPressButton);
-      var spell = Instantiate(_baseSpellProjectile.GetSpellPrefab(), spellSpawnPoint.position, spellSpawnPoint.rotation);
+      var spell = Instantiate(_baseSpell.GetSpellPrefab(), spellSpawnPoint.position, spellSpawnPoint.rotation);
       
-      spell.GetComponent<Rigidbody>().linearVelocity = spellSpawnPoint.forward * _baseSpellProjectile.Speed;
-      playerMana.manaCharacterValue -= _baseSpellProjectile.ManaCost;
+      spell.GetComponent<Rigidbody>().linearVelocity = spellSpawnPoint.forward * _baseSpell.Speed;
+      playerMana.manaCharacterValue -= _baseSpell.ManaCost;
       _isCastingSpell = false;
    }
    

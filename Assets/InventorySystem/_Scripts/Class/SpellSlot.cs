@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SpellItem : MonoBehaviour,IDropHandler
+public class SpellSlot : MonoBehaviour,IDropHandler
 {
+    
     public void OnDrop(PointerEventData eventData)
     {
         InventoryItem item = eventData.pointerDrag.GetComponent<InventoryItem>();
-        if (transform.childCount == 0)
+        if (transform.childCount == 0 && item.ItemInInventory.GetType() == typeof(BaseSpell))
         {
             item.SetAfterDragTransform(transform);
         }

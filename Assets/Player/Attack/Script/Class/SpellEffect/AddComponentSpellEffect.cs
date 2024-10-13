@@ -14,9 +14,9 @@ public class AddComponentSpellEffect : MonoBehaviour
 
     private void OnTriggerEnter(Collider triger)
     {
-        BaseSpellProjectile spellProjectile = triger.GetComponent<BaseSpellProjectile>();
+        BaseSpell spell = triger.GetComponent<BaseSpell>();
         
-        if (spellProjectile != null && gameObject.GetComponent<ComponentSpellSlowDown>() == null)
+        if (spell != null && gameObject.GetComponent<ComponentSpellSlowDown>() == null)
         {
             _spellSlowDownComponent = gameObject.AddComponent<ComponentSpellSlowDown>();
             StartCoroutine(EffectDestroy());

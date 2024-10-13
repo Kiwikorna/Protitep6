@@ -60,7 +60,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     // Проверяем, зарезервирован ли слот для другого предмета
     public bool IsReservedForOtherItem(ItemInInventory itemInInventory)
     {
-        return   _itemInInventory != itemInInventory;
+        return  _itemInInventory != itemInInventory;
     }
 
     // Проверка, зарезервирован ли слот

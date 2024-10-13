@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public  class UsualSpellProjectile : BaseSpellProjectile
+public  class UsualSpell : BaseSpell
 {
     private Vector3 _startPosition;
 

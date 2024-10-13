@@ -6,39 +6,31 @@
   <component name="ChangeListManager">
     <list default="true" id="a6bd6aa4-242a-4a70-82df-7493e266aa17" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Prefab/Eneme.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Prefab/Eneme.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/Prefab/ItemInventory/InventoryItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/Prefab/ItemInventory/InventoryItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/Prefab/SpellItem.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/Prefab/SpellItem.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventorySlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventorySlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/SlotUsing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/SlotUsing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/DropItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Script/DropItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/IntaractableItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Script/IntaractableItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Object/ManaObject.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Object/ManaObject.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Scripts/HealthItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Scripts/HealthItemInInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Scripts/HealthItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Scripts/HealthItemInInventory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Scripts/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Scripts/ItemInInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Scripts/Item.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Scripts/ItemInInventory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Scripts/ManaItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Scripts/ManaItemInInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Scripts/ManaItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Scripts/ManaItemInInventory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/BaseSpellProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/BaseSpellProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/SpellItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/SpellSlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/SpellItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/SpellSlot.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Object/BaseSpell.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Object/BaseSpell.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Object/HealthObject.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Object/HealthObject.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/CombinationSystem/SpellCombinationSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/CombinationSystem/SpellCombinationSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/BaseSpellProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/BaseSpell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/BaseSpellProjectile.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/BaseSpell.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/PlayerSpell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/PlayerSpell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/Spell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/Spell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/UsualSpellProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/UsualSpellProjectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Health/CharacterHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Health/CharacterHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Mana/CharacterMagic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/BaseStat/Mana/CharacterMagic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Intaraction/Class/InteractionSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Intaraction/Class/InteractionSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Other/ActionInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Other/ActionInputs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Other/ActionInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Other/ActionInputs.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Controller.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/AnimationPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Controller/AnimationPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/AnimationPlayer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Controller/AnimationPlayer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/HundleCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Controller/HundleCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/HundleCamera.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Controller/HundleCamera.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Controller/PlayerMovements.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/PlayerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Controller/PlayerMovements.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Controller/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerController/PlayerInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Controller/PlayerMovement.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/Spell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/Spell.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellItem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/UsualSpellProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/UsualSpell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/UsualSpellProjectile.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/UsualSpell.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellEffect/AddComponentSpellEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellEffect/AddComponentSpellEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellEffect/ComponentSpellSlowDown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellEffect/ComponentSpellSlowDown.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-Eneme.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-Eneme.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +43,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6d05dfc40cba48829da242ba2bdf642f2ac00/ff/9e6efbb2/Physics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/59/c1dcb750/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/5e/a559bce3/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/75/6a8e5c2f/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/7b/2fc8916a/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/e6/90b6a4f4/Vector4.cs" root0="SKIP_HIGHLIGHTING" />
@@ -71,6 +64,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -78,7 +72,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Inspections-C#&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -187,7 +181,9 @@
       <workItem from="1728495736870" duration="2869000" />
       <workItem from="1728546923048" duration="18126000" />
       <workItem from="1728584719525" duration="3277000" />
-      <workItem from="1728652192194" duration="2216000" />
+      <workItem from="1728652192194" duration="3409000" />
+      <workItem from="1728671622929" duration="10858000" />
+      <workItem from="1728815239367" duration="807000" />
     </task>
     <servers />
   </component>
@@ -203,5 +199,9 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

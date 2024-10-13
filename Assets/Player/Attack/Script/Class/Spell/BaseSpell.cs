@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class BaseSpellProjectile : MonoBehaviour
+public abstract class BaseSpell : MonoBehaviour
 {
     [SerializeField]private GameObject prefab;
    [field:SerializeField] public float Damage { get; private set; }
