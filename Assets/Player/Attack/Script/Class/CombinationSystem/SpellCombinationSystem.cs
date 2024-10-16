@@ -3,7 +3,7 @@ using System.Collections.Generic;
 public class SpellCombinationSystem
 {
     private readonly List<SpellSlot> _combinationSlot;
-    private BaseSpell _baseSpell;
+    private SpellConfig _spellConfig;
 
 
     /*private void AddSpellInCombimation(BaseSpellProjectile baseSpellProjectile)

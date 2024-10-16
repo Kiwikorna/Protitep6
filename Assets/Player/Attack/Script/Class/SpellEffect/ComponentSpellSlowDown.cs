@@ -12,9 +12,9 @@ public class ComponentSpellSlowDown : MonoBehaviour
     private const float DeleteSpellSlowDownEffect = 3.0f;
     private void OnTriggerEnter(Collider other)
     {
-        BaseSpell spell = other.GetComponent<BaseSpell>();
+        SpellConfig spellConfig = other.GetComponent<SpellConfig>();
 
-        if (spell != null)
+        if (spellConfig != null)
         {
              _pathFinding = GetComponent<PathFinding>();
              _slowDownValue = 3;

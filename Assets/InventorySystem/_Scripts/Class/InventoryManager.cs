@@ -104,7 +104,7 @@ public class InventoryManager : MonoBehaviour
             if ( itemInSlot == null)
             {
                 SpawnNewItemFromInventory(itemInInventory, slot);
-                Debug.Log("Easy");
+                
                 return true;
             }
         }

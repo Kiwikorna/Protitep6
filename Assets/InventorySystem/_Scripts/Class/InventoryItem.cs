@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class InventoryItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     public ItemInInventory ItemInInventory { get; private set; }
+    public SpellConfig Config { get; private set; }
     private Transform _afterDragTransform;
     public Image _imageItem; 
     [SerializeField] private TextMeshProUGUI textCount;
@@ -49,8 +50,13 @@ public class InventoryItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
 
     public void ImageIntializedAndRefreshItem(ItemInInventory itemInInventory)
     {
-         ItemInInventory = itemInInventory;
+        ItemInInventory = itemInInventory;
         _imageItem.sprite = ItemInInventory.sprite;
+        if (itemInInventory is SpellItem spellItem)
+        {
+            Config = spellItem.spellConfig;
+        }
+         // Назначаем конфигурацию заклинания (если есть)
         RefreshCount();
     }
     

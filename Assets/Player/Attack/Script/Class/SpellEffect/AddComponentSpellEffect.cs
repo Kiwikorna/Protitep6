@@ -12,18 +12,18 @@ public class AddComponentSpellEffect : MonoBehaviour
         _spellSlowDownComponent = GetComponent<ComponentSpellSlowDown>();
     }
 
-    private void OnTriggerEnter(Collider triger)
+    /*private void OnTriggerEnter(Collider triger)
     {
-        BaseSpell spell = triger.GetComponent<BaseSpell>();
+        SpellConfig spellConfig = triger.GetComponent<SpellConfig>();
         
-        if (spell != null && gameObject.GetComponent<ComponentSpellSlowDown>() == null)
+        if (spellConfig != null && gameObject.GetComponent<ComponentSpellSlowDown>() == null)
         {
             _spellSlowDownComponent = gameObject.AddComponent<ComponentSpellSlowDown>();
             StartCoroutine(EffectDestroy());
 
         }
         
-    }
+    }*/
 
     private IEnumerator EffectDestroy()
     {

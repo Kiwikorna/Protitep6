@@ -72,7 +72,7 @@ public class DropItem : MonoBehaviour
     public void SpawnDropItem(ItemInInventory itemInInventory, Vector3? dropPosition = null)
     {
         Vector3 drop = dropPosition ?? GetDropPosition(); 
-        Instantiate(itemInInventory.prefab, drop, Quaternion.identity);
+        Instantiate(itemInInventory.prefabDrop, drop, Quaternion.identity);
     }
 
     public bool IsHaveEmptySpaceInForwardDirection()

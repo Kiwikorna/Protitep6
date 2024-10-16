@@ -7,11 +7,11 @@ public class SpellSlot : MonoBehaviour,IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         InventoryItem item = eventData.pointerDrag.GetComponent<InventoryItem>();
-        if (transform.childCount == 0 && item.ItemInInventory.GetType() == typeof(BaseSpell))
+        if (transform.childCount == 0 && item.ItemInInventory is SpellItem)
         {
             item.SetAfterDragTransform(transform);
         }
-        else
+        else if(transform.childCount != 0 && item.ItemInInventory is SpellItem)
         {
             Transform existedItemTransform = transform.GetChild(0);
 
