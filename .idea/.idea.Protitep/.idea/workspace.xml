@@ -5,27 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bd6aa4-242a-4a70-82df-7493e266aa17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellConfig.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/SpellSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/SpellSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/Script/DropItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Script/DropItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Item/Prefab/HealthItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Prefab/HealthItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Item/Prefab/ManaItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Prefab/ManaItem.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Object/BaseSpellObject.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Object/BaseSpellObject.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Scripts/ItemInInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Scripts/ItemInInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Prefab/PlayerAttack.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Prefab/PlayerAttack.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Prefab/Spell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Prefab/Spell.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/CombinationSystem/SpellCombinationSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/CombinationSystem/SpellCombinationSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/BaseSpell.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/BaseSpell.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellConfig.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/PlayerSpell.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/PlayerSpell.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/UsualSpell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SingleSpels.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/UsualSpell.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SingleSpels.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellEffect/AddComponentSpellEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellEffect/AddComponentSpellEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellEffect/ComponentSpellSlowDown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellEffect/ComponentSpellSlowDown.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/PlayerMana.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/PlayerMana.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/CombinationSystem/SpellCombinationSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/CombinationSystem/SpellCombinationSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SingleSpels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SingleSpels.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellCaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellCaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Controller/PlayerMovements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Controller/PlayerMovements.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-NavMeshSurface.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-NavMeshSurface.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +43,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/7b/2fc8916a/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/e6/90b6a4f4/Vector4.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/SlotUsing.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/BaseSpell.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/TestSpell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/Attack/Script/Enum/StateSpellCast.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player/Script/Controller/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/CharacterManaSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/UIInventory/Script/InventoryInputUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -82,7 +81,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.10f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\Kostya\Desktop\All\Новая папка\Protitep&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Kostya\Desktop\All\Новая папка\Protitep" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -90,7 +89,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.10f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\Kostya\Desktop\All\Новая папка\Protitep&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Kostya\Desktop\All\Новая папка\Protitep" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -107,10 +106,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="20756">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="20756" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -187,6 +186,9 @@
       <workItem from="1729085129858" duration="350000" />
       <workItem from="1729085509332" duration="4135000" />
       <workItem from="1729099999490" duration="8459000" />
+      <workItem from="1729189482077" duration="720000" />
+      <workItem from="1729239077750" duration="14894000" />
+      <workItem from="1729275266020" duration="2191000" />
     </task>
     <servers />
   </component>
@@ -202,25 +204,6 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellCaster.cs</url>
-          <line>29</line>
-          <properties documentPath="C:\Users\Kostya\Desktop\All\Новая папка\Protitep\Assets\Player\Attack\Script\Class\Spell\SpellCaster.cs" containingFunctionPresentation="Method 'SpellCast'">
-            <startOffsets>
-              <option value="911" />
-            </startOffsets>
-            <endOffsets>
-              <option value="969" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

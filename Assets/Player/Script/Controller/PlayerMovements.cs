@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerMovements : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class PlayerMovements : MonoBehaviour
     private bool isRun = false;
     [SerializeField] private float speed = 7.0f; // Скорость в метрах в секунду
     [SerializeField] private float rotationSpeed = 10.0f;
+    [SerializeField]private SpellCaster spellCaster;
 
 
     private void Awake()
@@ -22,14 +25,19 @@ public class PlayerMovements : MonoBehaviour
         {
             Debug.LogError("Rigidbody component not found on this game object.");
         }
+        
     }
 
 
     private void FixedUpdate()
     {
-        HandlePlayer();
+        if ( spellCaster.GetStateMove() == StateMove.Move)
+        {
+            HandlePlayer();
+        }
+        
+        
     }
-
     private void HandlePlayer()
     {
         _move = ControllerPlayer.Instance.GetDirection();

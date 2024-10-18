@@ -5,15 +5,16 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 public  class SingleSpels : MonoBehaviour
-{
-    private Vector3 _startPosition;
-     [SerializeField] private SpellConfig spellItem;
+{  
+     [SerializeField] private SpellItem spellItem;
+     
+     private Vector3 _startPosition;
     private void Awake()
     {
         
         _startPosition = transform.position;
     }
-
+    
     private void Update()
     {
         SpellProjectileFly();
@@ -22,22 +23,22 @@ public  class SingleSpels : MonoBehaviour
     private  void SpellProjectileFly()
     {
         float distance = Vector3.Distance(transform.position, _startPosition);
-        if (distance >= spellItem.GetRange())
+        if (distance >= spellItem.spellConfig.GetRange())
             Destroy(gameObject);
     }
 
-    
+
+
     private  void  OnTriggerEnter(Collider other)
     {
         Damage enemy = other.GetComponent<Damage>();
         
         if (enemy != null)
         {
-            enemy.TakeDamage(spellItem.GetDamage());
+            enemy.TakeDamage(spellItem.spellConfig.GetDamage());
             
         }
-        Destroy(gameObject);
-
+        
     }
 
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2108631619093545236}
   - component: {fileID: 4578198260620188464}
   m_Layer: 3
-  m_Name: PlayerAttack
+  m_Name: SpellCCaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

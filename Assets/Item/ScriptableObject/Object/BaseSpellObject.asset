@@ -19,6 +19,6 @@ MonoBehaviour:
   spellConfig:
     prefab: {fileID: 1228941765567419161, guid: f8cfd38f3b9130c42be1466ae47e5497, type: 3}
     damage: 2
-    manaCost: 0
-    range: 4
+    manaCost: 75
+    range: 6
     speed: 5

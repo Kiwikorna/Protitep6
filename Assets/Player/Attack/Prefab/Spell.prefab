@@ -149,9 +149,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48daea56e83eb24f96b51a78aa6afba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellItem:
-    prefab: {fileID: 1228941765567419161}
-    damage: 500
-    manaCost: 0
-    range: 4
-    speed: 4
+  spellItem: {fileID: 11400000, guid: 994c91082fe63204e86effcf2cc79f20, type: 2}
