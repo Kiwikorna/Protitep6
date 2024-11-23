@@ -51,12 +51,18 @@ public class InventoryItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
     public void ImageIntializedAndRefreshItem(ItemInInventory itemInInventory)
     {
         ItemInInventory = itemInInventory;
+        
+        if (itemInInventory == null)
+        {
+            Debug.LogError("Переданный itemInInventory равен null!");
+            return;
+        }
         _imageItem.sprite = ItemInInventory.sprite;
         if (itemInInventory is SpellItem spellItem)
         {
             Config = spellItem;
         }
-         // Назначаем конфигурацию заклинания (если есть)
+        // Назначаем конфигурацию заклинания (если есть)
         RefreshCount();
     }
     

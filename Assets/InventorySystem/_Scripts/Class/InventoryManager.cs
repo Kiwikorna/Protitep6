@@ -14,8 +14,12 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject inventoryItemPrefab;
     [SerializeField] private GameObject dropItem;
     [SerializeField] private InventoryInputUI inputSlotUI;
+    
+
+ 
     private readonly int _maxSizeItemInSlot = 4;
     private int _selectSlot = -1;
+
     private readonly Dictionary<Type, int> _itemSlotConsolidate = new Dictionary<Type, int>();
 
     private void Awake()
@@ -82,7 +86,9 @@ public class InventoryManager : MonoBehaviour
             if (itemInSlot == null)
             {
                 // Если слот пуст, добавляем новый предмет
-                SpawnNewItemFromInventory(itemInInventory, reservedSlot);
+                SpawnNewItemToInventory(itemInInventory, reservedSlot);
+            
+      
                 return true;
             }
             else if (itemInSlot.GetItem() == itemInInventory && itemInSlot.GetItemCount() < _maxSizeItemInSlot)
@@ -90,47 +96,50 @@ public class InventoryManager : MonoBehaviour
                 // Если слот уже содержит этот предмет, увеличиваем количество
                 itemInSlot.IncriminationItemCount();
                 itemInSlot.RefreshCount();
-                return true;
-            }
-        }
-
-         // Ищем другой свободный слот
-        for (int i = 2; i < inventorySlots.Length; i++)
-        {
-            InventorySlot slot = inventorySlots[i];
-            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             
-            // Если слот не зарезервирован и пустой, можем его использовать
-            if ( itemInSlot == null)
-            {
-                SpawnNewItemFromInventory(itemInInventory, slot);
-                
                 return true;
             }
         }
 
-        return false;
+            // Ищем другой свободный слот
+            for (int i = 2; i < inventorySlots.Length; i++)
+            {
+                InventorySlot slot = inventorySlots[i];
+                InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+
+                // Если слот не зарезервирован и пустой, можем его использовать
+                if (itemInSlot == null)
+                {
+                    SpawnNewItemToInventory(itemInInventory, slot);
+            
+                   
+                    return true;
+                }
+            }
+
+            return false;
     }
+
 
     public ItemInInventory GetSelectedSlot(bool use)
     {
-        if (_selectSlot < 0 || _selectSlot >=  inventorySlots.Length)
+        if (_selectSlot < 0 || _selectSlot >= inventorySlots.Length)
         {
             return null;
         }
-        
-            
+
+
         InventorySlot selectSlot = inventorySlots[_selectSlot];
         InventoryItem itemInSlot = selectSlot.GetComponentInChildren<InventoryItem>();
 
         if (itemInSlot != null)
         {
-          ItemInInventory itemInInventory =  itemInSlot.GetItem();
+            ItemInInventory itemInInventory = itemInSlot.GetItem();
 
             if (use == true)
             {
                 RefreshAndDestroyItemInSlot(itemInSlot);
-                    
+
             }
             return itemInInventory;
         }
@@ -138,6 +147,10 @@ public class InventoryManager : MonoBehaviour
         return null;
 
     }
+    
+
+  
+
 
     public void RefreshAndDestroyItemInSlot(InventoryItem itemInSlot)
     {
@@ -152,11 +165,13 @@ public class InventoryManager : MonoBehaviour
                     
         }
     }
-    public void SpawnNewItemFromInventory(ItemInInventory itemInInventory, InventorySlot slot)
+
+   
+    public void SpawnNewItemToInventory(ItemInInventory itemInInventory, InventorySlot slot = null)
     {
         GameObject createNewItemInitiate = Instantiate(inventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = createNewItemInitiate.GetComponent<InventoryItem>();
-        Debug.Log(inventoryItem._imageItem);
+        
         inventoryItem.ImageIntializedAndRefreshItem(itemInInventory);
 
         // Резервируем слот для этого предмета

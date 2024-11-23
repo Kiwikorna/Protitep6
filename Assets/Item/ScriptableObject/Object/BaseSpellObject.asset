@@ -21,4 +21,6 @@ MonoBehaviour:
     damage: 2
     manaCost: 75
     range: 6
-    speed: 5
+    speed: 2
+    delayForSpell: 0
+    id: 1

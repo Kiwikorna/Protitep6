@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: spellDistance
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -2594224890137780036, guid: f8cfd38f3b9130c42be1466ae47e5497, type: 3}
+      propertyPath: spellItem
+      value: 
+      objectReference: {fileID: 11400000, guid: 184ffe2c603d91042987e6e8be237898, type: 2}
     - target: {fileID: 1228941765567419161, guid: f8cfd38f3b9130c42be1466ae47e5497, type: 3}
       propertyPath: m_Name
       value: SpellSlowDown

@@ -5,45 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bd6aa4-242a-4a70-82df-7493e266aa17" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Protitep/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/Prefab/HealthItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Prefab/HealthItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Item/Prefab/ManaItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/Prefab/ManaItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/InventoryManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Object/BaseSpellObject.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Item/ScriptableObject/Object/BaseSpellObject.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Prefab/PlayerAttack.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Prefab/PlayerAttack.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Prefab/Spell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Prefab/Spell.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/CombinationSystem/SpellCombinationSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/CombinationSystem/SpellCombinationSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Prefab/SpellSlowDown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Prefab/SpellSlowDown.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SingleSpels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SingleSpels.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellCaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellCaster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/Controller/PlayerMovements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/Controller/PlayerMovements.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/Spell/SpellItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellEffect/AddComponentSpellEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellEffect/AddComponentSpellEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellEffect/ComponentSpellSlowDown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellEffect/ComponentSpellSlowDown.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellEffect/SlowDownEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Attack/Script/Class/SpellEffect/SlowDownEffect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/PlayerMana.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ScriptebleObject/Object/PlayerMana.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-NavMeshSurface.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-NavMeshSurface.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6d05dfc40cba48829da242ba2bdf642f2ac00/ff/9e6efbb2/Physics.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/59/c1dcb750/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/5e/a559bce3/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/75/6a8e5c2f/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/7b/2fc8916a/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/e6/90b6a4f4/Vector4.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/321eb2db7c6d43ea8fc39b54eaca345246ae00/29/e4468011/Dictionary`2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/321eb2db7c6d43ea8fc39b54eaca345246ae00/5f/5d29d166/NullReferenceException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/321eb2db7c6d43ea8fc39b54eaca345246ae00/82/c6394f4a/ValueTuple`2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/321eb2db7c6d43ea8fc39b54eaca345246ae00/92/fd7839fc/Exception.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/321eb2db7c6d43ea8fc39b54eaca345246ae00/a0/36a80676/CollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/321eb2db7c6d43ea8fc39b54eaca345246ae00/be/bcbf4de3/SystemException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/1a/981d3320/Object.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/84/5ef4e927/Debug.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/SlotUsing.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Player/Attack/Script/Enum/StateSpellCast.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InventorySystem/_Scripts/Class/SpellSlotManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player/Script/Controller/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player/ScriptebleObject/Script/CharacterManaSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/UIInventory/Script/InventoryInputUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -68,15 +67,8 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Inspections-C#&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.C#&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Kostya\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Kostya\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Kostya\\AppData\\Local\\Symbols\\src&quot;
-    ]
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -189,6 +181,33 @@
       <workItem from="1729189482077" duration="720000" />
       <workItem from="1729239077750" duration="14894000" />
       <workItem from="1729275266020" duration="2191000" />
+      <workItem from="1729335162317" duration="1346000" />
+      <workItem from="1729337654897" duration="12002000" />
+      <workItem from="1729368666199" duration="493000" />
+      <workItem from="1729411432063" duration="8733000" />
+      <workItem from="1729757640923" duration="27000" />
+      <workItem from="1729757685067" duration="32000" />
+      <workItem from="1730566399350" duration="5437000" />
+      <workItem from="1730626316483" duration="9289000" />
+      <workItem from="1730658886340" duration="3025000" />
+      <workItem from="1730723461827" duration="1791000" />
+      <workItem from="1730805954285" duration="10063000" />
+      <workItem from="1730886691527" duration="1832000" />
+      <workItem from="1731008211551" duration="2208000" />
+      <workItem from="1731330588159" duration="2843000" />
+      <workItem from="1731349528605" duration="2979000" />
+      <workItem from="1731436677256" duration="1610000" />
+      <workItem from="1731861873754" duration="1446000" />
+      <workItem from="1731870046438" duration="2269000" />
+      <workItem from="1732027934951" duration="2829000" />
+      <workItem from="1732086411451" duration="13108000" />
+      <workItem from="1732182094016" duration="4244000" />
+      <workItem from="1732188781923" duration="285000" />
+      <workItem from="1732189302519" duration="16000" />
+      <workItem from="1732189330564" duration="10000" />
+      <workItem from="1732283000133" duration="5095000" />
+      <workItem from="1732370322356" duration="688000" />
+      <workItem from="1732390829045" duration="2394000" />
     </task>
     <servers />
   </component>

@@ -31,6 +31,12 @@ public  class SingleSpels : MonoBehaviour
 
     private  void  OnTriggerEnter(Collider other)
     {
+        SingleSpels singleSpels = other.GetComponent<SingleSpels>();
+
+        if (singleSpels != null)
+        {
+            return;
+        }
         Damage enemy = other.GetComponent<Damage>();
         
         if (enemy != null)
@@ -38,7 +44,9 @@ public  class SingleSpels : MonoBehaviour
             enemy.TakeDamage(spellItem.spellConfig.GetDamage());
             
         }
+        Destroy(gameObject);
         
     }
 
+    public SpellItem GetSpellItem() => spellItem;
 }
