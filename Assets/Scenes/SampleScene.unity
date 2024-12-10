@@ -4671,6 +4671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comboResipes:
+  - {fileID: 11400000, guid: 7e3a9a540ccdb734492c2c895433d7ed, type: 2}
   - {fileID: 11400000, guid: 9c74e1350f144d64aa83646a767511f8, type: 2}
 --- !u!4 &1454130991
 Transform:

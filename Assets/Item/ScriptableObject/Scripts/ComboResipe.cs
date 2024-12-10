@@ -7,5 +7,7 @@ public class ComboResipe : ScriptableObject
    public SpellItem secondItem;
 
    public SpellItem resultItem;
+   
+
 
 }

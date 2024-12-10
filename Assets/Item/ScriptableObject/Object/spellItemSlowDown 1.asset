@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7efd9cc21fb94d54886752395a93794b, type: 3}
-  m_Name: spellItemSlowDown
+  m_Name: spellItemSlowDown 1
   m_EditorClassIdentifier: 
   prefabDrop: {fileID: 8520773154677781182, guid: dd332dfff03ee414e8f9b00987fffe7f, type: 3}
   sprite: {fileID: 21300000, guid: b3a67fc6bd9f6405ba5785b99c7d830a, type: 3}

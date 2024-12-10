@@ -57,12 +57,5 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         _itemInInventory = itemInInventory;
     }
 
-    // Проверяем, зарезервирован ли слот для другого предмета
-    public bool IsReservedForOtherItem(ItemInInventory itemInInventory)
-    {
-        return  _itemInInventory != itemInInventory;
-    }
 
-    // Проверка, зарезервирован ли слот
-    public bool IsReserved() => _itemInInventory != null;
 }

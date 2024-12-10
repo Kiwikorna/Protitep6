@@ -1,38 +1,55 @@
-using System;
+
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CombinationManager : MonoBehaviour
 {
    [SerializeField] List<ComboResipe> comboResipes;
-   private Dictionary<(int,int),SpellItem> combinationsRecipe;
+   private Dictionary<HashSet<int>, List<SpellItem>> combinationsRecipe;
 
    private void Awake()
    {
       InitializeRecipeDictionary();
    }
+   
 
    private void InitializeRecipeDictionary()
    {
-      combinationsRecipe = new Dictionary<(int, int), SpellItem>();
+      combinationsRecipe = new Dictionary<HashSet<int>, List<SpellItem>>(new HashSetComparer());
       foreach (var combo in comboResipes)
       {
-         combinationsRecipe[(combo.firstItem.id, combo.secondItem.id)] = combo.resultItem;
-         combinationsRecipe[(combo.secondItem.id, combo.firstItem.id)] = combo.resultItem;
+         var set = new HashSet<int> { combo.firstItem.id, combo.secondItem.id };
+
+         if (!combinationsRecipe.ContainsKey(set))
+         {
+            combinationsRecipe[set] = new List<SpellItem>();
+         }
+
+         combinationsRecipe[set].Add(combo.resultItem);
       }
    }
 
-
    public SpellItem GetCombinationResult(SpellItem spellItem1, SpellItem spellItem2)
    {
-      // Проверяем, что оба предмета существуют
       if (spellItem1 != null && spellItem2 != null)
       {
-         return combinationsRecipe.GetValueOrDefault((spellItem1.id, spellItem2.id));
+         var set = new HashSet<int> { spellItem1.id, spellItem2.id };
+         
+         
+         
+         if (combinationsRecipe.TryGetValue(set, out List<SpellItem> results))
+         {
+            if (results.Count > 0)
+            {
+               return results[0]; // или выбирать результат по другому критерию
+            }
+         }
       }
 
       return null;
    }
+
+
    
    
 }
